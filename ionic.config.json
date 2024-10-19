@@ -1,0 +1,7 @@
+{
+  "name": "Flux-Fashion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
