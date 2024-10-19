@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-onboarding',
+  templateUrl: './onboarding.component.html',
+  styleUrls: ['./onboarding.component.scss'],
 })
-export class Tab1Page {
+export class OnboardingComponent  implements OnInit {
 
+  constructor(private router: Router){}
   slider: number = 0;
   slides: Array<any> = [
     {
@@ -32,9 +34,7 @@ export class Tab1Page {
   ];
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.activeSlider(this.slider + 1)
-    }, 2000);
+
   }
   
   activeSlider(number: number): void {
@@ -43,5 +43,9 @@ export class Tab1Page {
       this.slider = 0; // Reset slider when reaching the last one
     }
 
+  }
+
+  gettingStart(){
+   this.router.navigate(['/tabs'])
   }
 }
