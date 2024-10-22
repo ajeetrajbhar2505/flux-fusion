@@ -3,12 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path : '',
+    redirectTo : "authenticate",
+    pathMatch : 'full'
   },
   {
-    path: '',
-    loadChildren: () => import('./onboarding/onboarding.module').then(m => m.OnboardingModule)
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
     path: 'authenticate',

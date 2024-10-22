@@ -104,13 +104,16 @@ body {
   
   .box-two {
     width: 100%;
-  }
+    }
 
   /* Input container styling with icons */
 .input-container {
     position: relative;
     width: 100%;
-    margin-bottom: 15px;
+  }
+
+  .input-container:nth-child(3){
+    margin-bottom: 30px;
   }
   
   .input-container i {
@@ -160,3 +163,91 @@ body {
   .container p a:hover {
     text-decoration: underline;
   }
+
+
+  .logo img{
+    margin-top: 20px;
+    height: 330px;
+}
+.header {
+    p{
+        font-size: 30px;
+    font-weight: bolder;
+    }
+    text-align: center;
+    color: #000;
+}
+
+.header h4 {
+    font-size: 48px;
+    margin-bottom: 34px;
+}
+
+.header h4 span {
+    color: #00e777;
+}
+
+.login {
+    padding: 0 10%;
+    margin-top: 10%;
+    margin-bottom: 30px;
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 16px 12px;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+    background-image: none;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+}
+
+.sign-in {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+.button-next--fade {
+    opacity: 0.3;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+
+.slider-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 5px;
+}
+
+.slider {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #0000002e;
+    cursor: pointer;
+    margin: 2px 0;
+}
+
+.slider.selected {
+    width: 25px;
+    background-color: #000;
+    height: 5px;
+    animation: activeItem 5ms ease-in-out;
+}

@@ -5,10 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.scss'],
 })
-export class AuthenticateComponent  implements OnInit {
+export class AuthenticateComponent implements OnInit {
+  continuewithSocial: boolean = true
 
+  letsSignIn() {
+    this.continuewithSocial = !this.continuewithSocial
+  }
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }
