@@ -6,10 +6,11 @@ import { Router } from '@angular/router';
   templateUrl: './onboarding.component.html',
   styleUrls: ['./onboarding.component.scss'],
 })
-export class OnboardingComponent  implements OnInit {
+export class OnboardingComponent implements OnInit {
 
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
   slider: number = 0;
+  data = 'rzp_test_bi1qvKeFE2Pz31'
   slides: Array<any> = [
     {
       image: 'https://img.freepik.com/premium-vector/professional-shopper-female-character-use-help-personal-fashion-stylist_1016-5862.jpg?ga=GA1.1.789477323.1724498695&semt=ais_hybrid',
@@ -36,7 +37,7 @@ export class OnboardingComponent  implements OnInit {
   ngOnInit(): void {
 
   }
-  
+
   activeSlider(number: number): void {
     this.slider = number;
     if (number === this.slides.length) {
@@ -45,7 +46,8 @@ export class OnboardingComponent  implements OnInit {
 
   }
 
-  gettingStart(){
-   this.router.navigate(['/tabs'])
+  gettingStart() {
+    this.router.navigate(['/authenticate'])
   }
+
 }

@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { OnboardingRoutingModule } from './onboarding-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OnboardingComponent } from './onboarding.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WindowRefService } from '../windowref.service';
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { OnboardingComponent } from './onboarding.component';
   imports: [
     CommonModule,
     OnboardingRoutingModule,
-    ReactiveFormsModule,
-  ]
+    ReactiveFormsModule
+  ],
+  providers : [WindowRefService]
 })
 export class OnboardingModule { }
