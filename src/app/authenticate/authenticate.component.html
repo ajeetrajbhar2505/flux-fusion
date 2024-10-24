@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="box-two">
-        <button class="next-btn" (click)="letsSignIn()">{{!continuewithSocial?'Login':'Sign in with password'}}</button>
+        <button class="next-btn" (click)="!continuewithSocial?letsSignIn():continuewithSocial = false">{{!continuewithSocial?'Login':'Sign in with password'}}</button>
     </div>
     <h5 *ngIf="!continuewithSocial">Or</h5>
     <div class="box box-one" *ngIf="!continuewithSocial">

@@ -1,0 +1,50 @@
+<ion-header collapse="fade" class="ion-no-border">
+    <div class="ion-toolbar">
+        <ion-icon size="medium" class="ionic-icon" routerLink="/authenticate"  name="arrow-back-outline"></ion-icon>
+        <div class="ionic-title">Create New PIN</div>
+    </div>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <div id="pincode">
+        <div class="table">
+            <div class="cell">
+      
+                <div id="anleitung">
+                    <p>Add a PIN number to make your account <br>more secure</p>
+                </div>
+      
+                <div id="fields">
+                    <div class="pin-grid grid">
+                        <div class="grid__col grid__col--1-of-4 numberfield {{pin1?'filled':''}}"><span
+                                class="{{!pin1?'show__number':'hide__number'}}">{{pin1}}</span></div>
+                        <div class="grid__col grid__col--1-of-4 numberfield {{pin2?'filled':''}}"><span
+                                class="{{shownumber && !pin2 && pin1?'show__number':'hide__number'}}">{{pin2}}</span></div>
+                        <div class="grid__col grid__col--1-of-4 numberfield {{pin3?'filled':''}}"><span
+                                class="{{shownumber && !pin3 && pin2?'show__number':'hide__number'}}">{{pin3}}</span></div>
+                        <div class="grid__col grid__col--1-of-4 numberfield {{pin4?'filled':''}}"><span
+                                class="{{shownumber && !pin4 && pin3?'show__number':'hide__number'}}">{{pin4}}</span></div>
+                    </div>
+                </div>
+                <div class="resend-details">
+                    <button (click)="setOTP()"
+                        [disabled]="!enableVerifybtn">Continue</button>
+                </div>
+                <div id="numbers">
+                    <div class="grid">
+                        <div class="grid__col grid__col--1-of-3" [style]="pin4?'pointer-events: none':''"
+                            (click)="!pin4 ? handlePIN(data) : $event.preventDefault()" *ngFor="let data of numers;">
+                            <button>{{data}}</button>
+                        </div>
+      
+                        <div class="grid__col grid__col--1-of-3"><button>*</button></div>
+                        <div class="grid__col grid__col--1-of-3" (click)="handlePIN('0')"><button>0</button></div>
+                        <div class="grid__col grid__col--1-of-3"><button style="transform: rotate(180deg);"
+                                (click)="pin1 ? removePin() : $event.preventDefault()">⌦</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </ion-content>
+
+

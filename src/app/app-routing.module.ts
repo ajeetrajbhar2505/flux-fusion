@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'authenticate',
     loadChildren: () => import('./authenticate/authenticate.module').then(m => m.AuthenticateModule)
+  },
+  {
+    path: 'authenticate-pin',
+    loadChildren: () => import('./pin/pin.module').then(m => m.PinModule)
   }
 ];
 @NgModule({

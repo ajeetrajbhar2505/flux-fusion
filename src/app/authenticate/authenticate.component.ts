@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-authenticate',
@@ -8,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class AuthenticateComponent implements OnInit {
   continuewithSocial: boolean = true
 
-  letsSignIn() {
-    this.continuewithSocial = !this.continuewithSocial
-  }
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit() { }
 
+
+  letsSignIn() {
+    this.router.navigate(['authenticate-pin'])
+  }
 }
