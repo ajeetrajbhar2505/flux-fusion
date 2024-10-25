@@ -17,4 +17,8 @@ export class AuthenticateComponent implements OnInit {
   letsSignIn() {
     this.router.navigate(['authenticate-pin'])
   }
+  
+  navigateToOTPPage(){
+    this.router.navigate(['reset-passwprd'])
+  }
 }

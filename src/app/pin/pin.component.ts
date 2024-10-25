@@ -72,7 +72,7 @@ export class PinComponent implements OnInit {
   }
 
   setOTP(){
-
+   
   }
 
 

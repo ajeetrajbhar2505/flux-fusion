@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'authenticate-pin',
     loadChildren: () => import('./pin/pin.module').then(m => m.PinModule)
+  },
+  {
+    path: 'reset-passwprd',
+    loadChildren: () => import('./reset-password/reset-password.module').then(m => m.ResetPasswordModule)
   }
 ];
 @NgModule({

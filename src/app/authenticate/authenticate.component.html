@@ -2,11 +2,11 @@
     <img width="250px" src="https://img.freepik.com/premium-vector/mobile-login-flat-design-vector-illustration_1288538-7539.jpg?ga=GA1.1.262899835.1729593723&semt=ais_hybrid" />
     <div class="box box-one" *ngIf="continuewithSocial">
         <h2>Let's you in</h2>
-        <button>
+        <button (click)="navigateToOTPPage()">
             <img src="assets/google.png" width="19">
             <span>Sign in with Google</span>
         </button>
-        <button>
+        <button (click)="navigateToOTPPage()">
             <img src="assets/apple.png" width="19">
             <span>Sign in with Apple</span>
         </button>
@@ -27,16 +27,17 @@
     <div class="box-two">
         <button class="next-btn" (click)="!continuewithSocial?letsSignIn():continuewithSocial = false">{{!continuewithSocial?'Login':'Sign in with password'}}</button>
     </div>
+    <p>Don't have an account <a href="#">Sign Up</a></p>
+
     <h5 *ngIf="!continuewithSocial">Or</h5>
     <div class="box box-one" *ngIf="!continuewithSocial">
-        <button>
+        <button (click)="navigateToOTPPage()">
             <img src="assets/google.png" width="19">
             <span>Sign in with Google</span>
         </button>
-        <button>
+        <button (click)="navigateToOTPPage()">
             <img src="assets/apple.png" width="19">
             <span>Sign in with Apple</span>
         </button>
     </div>
-    <p>Don't have an account <a href="#">Sign Up</a></p>
 </div>
