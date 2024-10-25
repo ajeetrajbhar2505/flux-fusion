@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ResetPasswordComponent {
   openOTP: boolean = false
-
+  forgotBy:string = "+91-7718569994"
   constructor(){
   }
   generateOTP() {

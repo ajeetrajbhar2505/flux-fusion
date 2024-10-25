@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit,  } from '@angular/core';
 import { Subscription, map, take, timer } from 'rxjs';
 
 @Component({
@@ -7,6 +7,7 @@ import { Subscription, map, take, timer } from 'rxjs';
   styleUrls: ['./otp.component.scss'],
 })
 export class OtpComponent implements OnInit {
+  @Input() forgotBy:string = ""
   private timerSubscription: Subscription | null = null;
   numers: string[] = []
   pin1: string = ''
