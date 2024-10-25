@@ -14,6 +14,6 @@ import { OtpComponent } from '../otp/otp.component';
     IonicModule,
     CommonModule
   ],
-  providers:[OtpComponent]
+  exports:[OtpComponent]
 })
 export class GlobalModule { }

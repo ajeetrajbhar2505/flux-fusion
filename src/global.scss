@@ -252,3 +252,21 @@ body {
     height: 5px;
     animation: activeItem 5ms ease-in-out;
 }
+
+
+.ion-toolbar {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+
+  .ionic-icon {
+    zoom: 1.5;
+    color: #333;
+    font-weight: lighter;
+  }
+
+  .ionic-title {
+    font-weight: bold;
+    color: #333;
+  }
+}
