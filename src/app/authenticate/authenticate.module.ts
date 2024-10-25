@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AuthenticateRoutingModule } from './authenticate-routing.module';
 import { AuthenticateComponent } from './authenticate.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { GlobalModule } from '../global/global.module';
 
 
 @NgModule({
@@ -11,7 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AuthenticateRoutingModule,
-    ReactiveFormsModule,
+    GlobalModule
   ]
 })
 export class AuthenticateModule { }

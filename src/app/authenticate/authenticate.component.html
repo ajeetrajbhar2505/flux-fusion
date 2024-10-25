@@ -1,13 +1,13 @@
 <div class="container">
-    <img width="250px" src="https://img.freepik.com/premium-vector/mobile-login-flat-design-vector-illustration_1288538-7539.jpg?ga=GA1.1.262899835.1729593723&semt=ais_hybrid" />
+    <img width="250px" loading="eager" src="assets/login.avif" />
     <div class="box box-one" *ngIf="continuewithSocial">
         <h2>Let's you in</h2>
         <button (click)="navigateToOTPPage()">
-            <img src="assets/google.png" width="19">
+            <img loading="lazy" src="assets/google.png" width="19">
             <span>Sign in with Google</span>
         </button>
         <button (click)="navigateToOTPPage()">
-            <img src="assets/apple.png" width="19">
+            <img loading="lazy" src="assets/apple.png" width="19">
             <span>Sign in with Apple</span>
         </button>
     </div>
@@ -32,11 +32,11 @@
     <h5 *ngIf="!continuewithSocial">Or</h5>
     <div class="box box-one" *ngIf="!continuewithSocial">
         <button (click)="navigateToOTPPage()">
-            <img src="assets/google.png" width="19">
+            <img loading="lazy" src="assets/google.png" width="19">
             <span>Sign in with Google</span>
         </button>
         <button (click)="navigateToOTPPage()">
-            <img src="assets/apple.png" width="19">
+            <img loading="lazy" src="assets/apple.png" width="19">
             <span>Sign in with Apple</span>
         </button>
     </div>
