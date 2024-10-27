@@ -110,7 +110,7 @@
   }
   
   .resend-details button:disabled{
-    background-color: #555;
+    background-color: #cccccc;
     color: #fff;
     pointer-events: none;
   }
@@ -436,6 +436,8 @@
     max-height: 30%;
     overflow: auto;
     margin-top: 10px;
+    font-size: 15px;
+    color: #333;
   }
   
   @media screen and (max-width: 700px) {
