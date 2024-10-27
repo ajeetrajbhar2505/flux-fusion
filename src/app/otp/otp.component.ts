@@ -1,4 +1,5 @@
 import { Component, Input, OnInit,  } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription, map, take, timer } from 'rxjs';
 
 @Component({
@@ -20,13 +21,12 @@ export class OtpComponent implements OnInit {
   showLoader: boolean = false
   countDown: any
   enableResendOTP: boolean = false
+
+  constructor(private router:Router){}
+
   ngOnInit(): void {
     this.generatePin()
     this.startCounter(1500)
-  }
-
-  constructor() {
-    this.showLoader = false
   }
 
   generatePin() {
@@ -71,7 +71,7 @@ export class OtpComponent implements OnInit {
     }, 200);
     setTimeout(() => {
       this.startCounter(1500)
-      // this.showLoader = false
+    this.router.navigate(['authenticate-pin'])
       this.pin1 = ""
       this.pin2 = ""
       this.pin3 = ""

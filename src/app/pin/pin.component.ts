@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map, take, timer } from 'rxjs';
 
 @Component({
@@ -15,6 +16,9 @@ export class PinComponent implements OnInit {
   PIN: string = ''
   removeCounter:number = 0
   shownumber: boolean = false
+
+  constructor(private router:Router){}
+
   ngOnInit(): void {
     this.generatePin()
   }
@@ -71,8 +75,8 @@ export class PinComponent implements OnInit {
     this.removeCounter -= 1
   }
 
-  setOTP(){
-   
+  goToHome(){
+    this.router.navigate(['home'])
   }
 
 

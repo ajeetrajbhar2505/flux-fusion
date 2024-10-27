@@ -8,17 +8,24 @@ import { Router } from '@angular/router';
 })
 export class AuthenticateComponent implements OnInit {
   continuewithSocial: boolean = true
+  signUp:boolean = false
+  openOTP: boolean = false
 
   constructor( private router:Router) { }
 
   ngOnInit() { }
 
 
-  letsSignIn() {
-    this.router.navigate(['authenticate-pin'])
-  }
   
   navigateToOTPPage(){
     this.router.navigate(['reset-passwprd'])
+  }
+
+  generateOTP() {
+    this.openOTP = !this.openOTP
+  }
+
+  closeOTP(){
+    this.openOTP = false
   }
 }

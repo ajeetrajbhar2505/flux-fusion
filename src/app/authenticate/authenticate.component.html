@@ -1,20 +1,32 @@
-<div class="container">
+<ion-header collapse="fade" class="ion-no-border" *ngIf="openOTP">
+    <div class="ion-toolbar">
+        <ion-icon size="medium" class="ionic-icon" (click)="closeOTP()" routerLink="/authenticate" name="arrow-back-outline"></ion-icon>
+        <div class="ionic-title">Enter OTP details</div>
+    </div>
+  </ion-header>
+  <ion-content class="ion-padding">
+<app-otp *ngIf="openOTP" [forgotBy]="'ajeetrajbhar2504@gmail.com'"></app-otp>
+<div class="container" *ngIf="!openOTP">
     <img width="250px" loading="eager" src="assets/login.avif" />
     <div class="box box-one" *ngIf="continuewithSocial">
         <h2>Let's you in</h2>
         <button (click)="navigateToOTPPage()">
             <img loading="lazy" src="assets/google.png" width="19">
-            <span>Sign in with Google</span>
+            <span>Continue with Google</span>
         </button>
         <button (click)="navigateToOTPPage()">
             <img loading="lazy" src="assets/apple.png" width="19">
-            <span>Sign in with Apple</span>
+            <span>Continue with Apple</span>
         </button>
     </div>
     <h5 *ngIf="continuewithSocial">Or</h5>
     
     <div class="box box-two" *ngIf="!continuewithSocial">
         <h2>Let's you in</h2>
+        <div class="input-container" *ngIf="signUp">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Name" class="input-field" />
+        </div>
         <div class="input-container">
             <i class="fa fa-envelope"></i>
             <input type="email" placeholder="Email" class="input-field" />
@@ -25,19 +37,20 @@
         </div>
     </div>
     <div class="box-two">
-        <button class="next-btn" (click)="!continuewithSocial?letsSignIn():continuewithSocial = false">{{!continuewithSocial?'Login':'Sign in with password'}}</button>
+        <button [class]="!continuewithSocial?'mt-30 next-btn':'next-btn'" (click)="!continuewithSocial?generateOTP():continuewithSocial = false">{{!continuewithSocial?(signUp?'Signup':'Login'):'Sign in with password'}}</button>
     </div>
-    <p>Don't have an account <a href="#">Sign Up</a></p>
+    <p>{{signUp?"Don't":'Do you '}} have an account <a (click)="signUp = !signUp;continuewithSocial = false">{{!signUp?'Sign Up':'Login In'}}</a></p>
 
     <h5 *ngIf="!continuewithSocial">Or</h5>
     <div class="box box-one" *ngIf="!continuewithSocial">
         <button (click)="navigateToOTPPage()">
             <img loading="lazy" src="assets/google.png" width="19">
-            <span>Sign in with Google</span>
+            <span>Continue with Google</span>
         </button>
         <button (click)="navigateToOTPPage()">
             <img loading="lazy" src="assets/apple.png" width="19">
-            <span>Sign in with Apple</span>
+            <span>Continue with Apple</span>
         </button>
     </div>
 </div>
+</ion-content>
