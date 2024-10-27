@@ -1,4 +1,4 @@
-import { Component, Input, OnInit,  } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, map, take, timer } from 'rxjs';
 
@@ -7,8 +7,8 @@ import { Subscription, map, take, timer } from 'rxjs';
   templateUrl: './otp.component.html',
   styleUrls: ['./otp.component.scss'],
 })
-export class OtpComponent implements OnInit {
-  @Input() forgotBy:string = ""
+export class OtpComponent implements OnInit, OnDestroy {
+  @Input() forgotBy: string = ""
   private timerSubscription: Subscription | null = null;
   numers: string[] = []
   pin1: string = ''
@@ -22,7 +22,7 @@ export class OtpComponent implements OnInit {
   countDown: any
   enableResendOTP: boolean = false
 
-  constructor(private router:Router){}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.generatePin()
@@ -71,7 +71,8 @@ export class OtpComponent implements OnInit {
     }, 200);
     setTimeout(() => {
       this.startCounter(1500)
-    this.router.navigate(['authenticate-pin'])
+      this.showLoader = false
+      this.router.navigate(['home'], { skipLocationChange: true })
       this.pin1 = ""
       this.pin2 = ""
       this.pin3 = ""
@@ -114,6 +115,16 @@ export class OtpComponent implements OnInit {
         this.enableResendOTP = true;
       }
     });
+  }
+  ngOnDestroy(): void {
+    this.startCounter(1500)
+    this.pin1 = ""
+    this.pin2 = ""
+    this.pin3 = ""
+    this.pin4 = ""
+    this.PIN = ""
+    this.removeCounter = 1
+    this.showLoader = false
   }
 
 }

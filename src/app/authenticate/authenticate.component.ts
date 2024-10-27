@@ -8,24 +8,24 @@ import { Router } from '@angular/router';
 })
 export class AuthenticateComponent implements OnInit {
   continuewithSocial: boolean = true
-  signUp:boolean = false
+  signUp: boolean = false
   openOTP: boolean = false
 
-  constructor( private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
 
-  
-  navigateToOTPPage(){
-    this.router.navigate(['reset-passwprd'])
+
+  navigateToOTPPage() {
+    this.openOTP = true
   }
 
   generateOTP() {
     this.openOTP = !this.openOTP
   }
 
-  closeOTP(){
+  closeOTP() {
     this.openOTP = false
   }
 }
