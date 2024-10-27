@@ -1,0 +1,159 @@
+
+*{
+    margin: unset;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-left p {
+    font-size: 14px;
+    color: #777;
+}
+
+.header-left h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-right i {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #f5f5f5;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar i {
+    color: #777;
+}
+
+.special-offers h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.offer-text h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #333;
+    font-weight: 700;
+}
+
+.offer-text p {
+    font-size: 14px;
+    font-weight: 800;
+    color: #666;
+    margin-top: 5px;
+}
+
+.offer-text small {
+    font-size: 12px;
+    color: #999;
+}
+
+.offer-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    margin-bottom: 10px;
+}
+
+.category-item i {
+    font-size: 24px;
+    color: #333;
+}
+
+.category-item p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.most-popular h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    width: 312px;
+    overflow-x: auto;
+    scrollbar-width: none; 
+}
+
+.filter-buttons button {
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.filter-buttons .active,
+.filter-buttons button:hover {
+    background-color: #333;
+    color: #fff;
+}
