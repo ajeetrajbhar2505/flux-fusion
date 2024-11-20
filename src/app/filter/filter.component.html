@@ -1,0 +1,55 @@
+<div class="filter-container">
+  <h2>Sort & Filter</h2>
+  <div class="categories">
+    <h3>Categories</h3>
+    <div class="category-options">
+      <button class="active">All</button>
+      <button>Clothes</button>
+      <button>Electronics</button>
+      <button>Shoes</button>
+    </div>
+  </div>
+  
+
+  <div class="card">
+    <h3>Price Range</h3>
+    <div class="range_container">
+        <div class="sliders_control">
+
+            <input #fromSlider type="range" min="0" max="100" value="20" />
+            <div #fromSliderTooltip class="tooltip slider-tooltip"></div>
+            <div #scale class="scale"></div>
+            <input #toSlider type="range" min="0" max="100" value="80" />
+            <div #toSliderTooltip class="tooltip slider-tooltip"></div>
+
+        </div>
+    </div>
+</div>
+
+  
+  <div class="sort-by">
+    <h3>Sort By</h3>
+    <div class="sort-options">
+      <button>Popular</button>
+      <button class="active">Most Recent</button>
+      <button>Price High</button>
+      <button>Price Low</button>
+    </div>
+  </div>
+  
+  <div class="ratings">
+    <h3>Rating</h3>
+    <div class="rating-options">
+      <button>All</button>
+      <button>5 ★</button>
+      <button class="active">4 ★</button>
+      <button>3 ★</button>
+      <button>2 ★</button>
+    </div>
+  </div>
+  
+  <div class="action-buttons">
+    <button class="reset-button">Reset</button>
+    <button class="apply-button">Apply</button>
+  </div>
+</div>
