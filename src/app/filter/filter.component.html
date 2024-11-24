@@ -9,22 +9,33 @@
       <button>Shoes</button>
     </div>
   </div>
-  
 
-  <div class="card">
-    <h3>Price Range</h3>
-    <div class="range_container">
+
+    
+    <div class="price-range-slider">
+      <h3>Price Range</h3>
+      <div class="range-container">
         <div class="sliders_control">
-
-            <input #fromSlider type="range" min="0" max="100" value="20" />
-            <div #fromSliderTooltip class="tooltip slider-tooltip"></div>
-            <div #scale class="scale"></div>
-            <input #toSlider type="range" min="0" max="100" value="80" />
-            <div #toSliderTooltip class="tooltip slider-tooltip"></div>
-
+          <input #fromSlider type="range" min="100" max="1000" value="100" />
+          <div #scale class="scale"></div>
+          <input #toSlider type="range" min="100" max="1000" value="1000" />
+      </div>
+        <div class="equalizer-bars">
+          <span class="bar" style="height: 20%;"></span>
+          <span class="bar" style="height: 50%;"></span>
+          <span class="bar" style="height: 70%;"></span>
+          <span class="bar" style="height: 40%;"></span>
+          <span class="bar" style="height: 90%;"></span>
+          <span class="bar" style="height: 60%;"></span>
         </div>
+        <div class="price-labels">
+          <span id="fromPrice"> <div #fromSliderTooltip class="tooltip slider-tooltip"></div>
+          </span>
+          <span id="toPrice">  <div #toSliderTooltip class="tooltip slider-tooltip"></div></span>
+        </div>
+      </div>
     </div>
-</div>
+  
 
   
   <div class="sort-by">
@@ -49,7 +60,7 @@
   </div>
   
   <div class="action-buttons">
-    <button class="reset-button">Reset</button>
-    <button class="apply-button">Apply</button>
+    <button class="reset-button" routerLink="/home">Cancel</button>
+    <button class="apply-button" routerLink="/home">Apply</button>
   </div>
 </div>
