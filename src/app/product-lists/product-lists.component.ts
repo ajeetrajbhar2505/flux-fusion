@@ -1,14 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-lists',
   templateUrl: './product-lists.component.html',
   styleUrls: ['./product-lists.component.scss'],
 })
-export class ProductListsComponent  implements OnInit {
+export class ProductListsComponent implements OnInit {
+  @Input() showheader: boolean = true
+  constructor(public router: Router) { }
 
-  constructor() { }
-
-  ngOnInit() {}
+  goBack() {
+    this.router.navigate(['/home'])
+  }
+  ngOnInit() { }
 
 }
