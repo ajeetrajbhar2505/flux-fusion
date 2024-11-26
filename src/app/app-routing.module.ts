@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'filter',
     loadChildren: () => import('./filter/filter.module').then(m => m.FilterModule)
+  },
+  {
+    path: 'product-lists',
+    loadChildren: () => import('./product-lists/product-lists.module').then(m => m.ProductListsModule)
+  },
+  {
+    path: 'view-product',
+    loadChildren: () => import('./view-product/view-product.module').then(m => m.ViewProductModule)
   }
 ];
 @NgModule({
