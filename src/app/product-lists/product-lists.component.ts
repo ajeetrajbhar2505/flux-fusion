@@ -13,6 +13,10 @@ export class ProductListsComponent implements OnInit {
   goBack() {
     this.router.navigate(['/home'])
   }
+
+  viewProduct(){
+    this.router.navigate(['/view-product'])
+  }
   ngOnInit() { }
 
 }

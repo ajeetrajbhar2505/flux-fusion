@@ -64,7 +64,7 @@
   }
 
   .product-card img {
-    width: 150px; /* Set a fixed height */
+    width: 135px; /* Set a fixed height */
     object-fit: contain; /* Ensure the image scales properly */
     margin: 0 auto; /* Center the image */
     display: block; /* Ensure it's treated as a block element */
@@ -96,7 +96,8 @@
     color: #555;
     button{
     font-size: 12px;
-    padding: 10px;
+    margin-left: 5px;
+    padding: 5px 10px 5px 10px;
       border-radius: 5px;
     }
   }

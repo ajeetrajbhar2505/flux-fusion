@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ViewProductRoutingModule } from './view-product-routing.module';
 import { GlobalModule } from '../global/global.module';
 import { ViewProductComponent } from './view-product.component';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ViewProductComponent } from './view-product.component';
   imports: [
     CommonModule,
     ViewProductRoutingModule,
-    GlobalModule
+    GlobalModule,
+    IonicModule
   ]
 })
 export class ViewProductModule { }

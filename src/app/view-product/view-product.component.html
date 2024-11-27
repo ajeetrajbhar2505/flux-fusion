@@ -1,20 +1,25 @@
+<div collapse="fade" class="ion-no-border">
+  <div class="ion-toolbar">
+    <ion-icon size="medium" (click)="goBack()" class="ionic-icon" name="arrow-back-outline"></ion-icon>
+  </div>
+</div>
 
 <div class="container">
   <div class="header">
-    <button>⬅</button>
-    <button>❤️</button>
   </div>
 
   <div class="product-image">
-    <img src="https://via.placeholder.com/400" alt="Product Image">
+    <img src="assets/shirt.png" alt="Product Image">
   </div>
 
   <div class="product-details">
     <h1>Venesa Long Shirt</h1>
-    <p class="rating">⭐ 4.8 (4,749 reviews)</p>
-    <p class="rating">🔗 7,642 sold</p>
+    <p class="rating"> <button>7,642 sold</button> <ion-icon size="medium" class="ionic-icon"
+        name="star-half-outline"></ion-icon> 4.8 (4,749 reviews)</p>
+    <h2>Description</h2>
     <p class="description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
     </p>
   </div>
 
@@ -45,6 +50,8 @@
     </div>
   </div>
 
-  <p class="price">Total Price: $320.00</p>
-  <button class="add-to-cart">Add to Cart</button>
+ <div class="buy-details">
+  <p>Total Price: <span class="price">  $320.00</span></p>
+  <button class="add-to-cart"> Add to Cart</button>
+ </div>
 </div>
