@@ -15,7 +15,8 @@
   </header>
 
   <div class="search-bar">
-    <input type="text" placeholder="Search" (focus)="navigateToFilter()">
+    <input type="text" placeholder="Search">
+    <ion-icon (click)="navigateToFilter()" name="options-outline"></ion-icon>
     <i class="fa fa-sliders-h"></i>
   </div>
 
@@ -77,4 +78,5 @@
     <app-product-lists [showheader]="false"></app-product-lists>
 
   </section>
+
 </div>
