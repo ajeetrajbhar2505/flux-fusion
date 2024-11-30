@@ -19,7 +19,7 @@
     <span *ngIf="!filteredProducts.length">found 0</span>
     <span *ngIf="filteredProducts.length">{{filteredProducts.length}} found</span>
   </div>
-  <section class="most-popular" *ngIf="showheader">
+  <section class="most-popular" *ngIf="showheader && filteredProducts.length">
     <div class="filter-buttons">
       <button class="active">All</button>
       <button>Clothes</button>
