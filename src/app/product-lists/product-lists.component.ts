@@ -14,8 +14,8 @@ export class ProductListsComponent implements OnInit {
     this.router.navigate(['/home'])
   }
 
-  viewProduct(img:string){
-    this.router.navigate(['/view-product'],{queryParams : { productImage : img}})
+  viewProduct(productImageId: number) {
+    this.router.navigate(['/view-product'], { queryParams: { productImageId } })
   }
   ngOnInit() { }
 

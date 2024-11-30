@@ -1,17 +1,16 @@
-<div collapse="fade" class="ion-no-border">
-  <div class="ion-toolbar">
+
+<div class="header-container">
+  <div class="header">
     <ion-icon size="medium" (click)="goBack()" class="ionic-icon" name="arrow-back-outline"></ion-icon>
   </div>
+  
+  <div class="product-image">
+    <img *ngFor="let data of productImages" [src]="data"  alt="Product Image">
+  </div>
+  
 </div>
 
 <div class="container">
-  <div class="header">
-  </div>
-
-  <div class="product-image">
-    <img [src]="productImage" alt="Product Image">
-  </div>
-
   <div class="product-details">
     <h1>Venesa Long Shirt</h1>
     <p class="rating"> <button>7,642 sold</button> <ion-icon size="medium" class="ionic-icon"
@@ -25,14 +24,14 @@
 
   <div class="options">
     <div class="sizes">
-      <span class="label">Size</span>
+      <span class="label">Sizes</span>
       <button class="active">S</button>
       <button>M</button>
       <button>L</button>
     </div>
 
     <div class="colors">
-      <span class="label">Color</span>
+      <span class="label">Colors</span>
       <button class="black active"></button>
       <button class="blue"></button>
       <button class="gray"></button>
@@ -49,9 +48,12 @@
       <button>+</button>
     </div>
   </div>
-
- <div class="buy-details">
+  <div class="price-details">
   <p>Total Price: <span class="price">  $320.00</span></p>
-  <button class="add-to-cart"> Add to Cart</button>
+  </div>
+
+ <div class="buy-button">
+  <button class="add-to-cart"> <ion-icon size="medium"  class="ionic-icon" name="bag-handle-outline"></ion-icon>
+    Add to Cart</button>
  </div>
 </div>
