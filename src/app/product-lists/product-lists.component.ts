@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-lists',
@@ -8,7 +8,13 @@ import { Router } from '@angular/router';
 })
 export class ProductListsComponent implements OnInit {
   @Input() showheader: boolean = true
-  constructor(public router: Router) { }
+  @Input() search: boolean = false
+  constructor(public router: Router, private ActivatedRoute: ActivatedRoute) {
+    this.ActivatedRoute.queryParams.subscribe((data: any) => {
+      this.search = data.enableSearchBar || false
+
+    })
+  }
 
   goBack() {
     this.router.navigate(['/home'])
@@ -16,6 +22,10 @@ export class ProductListsComponent implements OnInit {
 
   viewProduct(productImageId: number) {
     this.router.navigate(['/view-product'], { queryParams: { productImageId } })
+  }
+
+  navigateToFilter() {
+    this.router.navigate(['/filter'])
   }
   ngOnInit() { }
 

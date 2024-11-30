@@ -6,14 +6,22 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent  implements OnInit {
+export class HomeComponent implements OnInit {
+  constructor(public router: Router) { }
 
-  constructor(public router:Router) { }
+  ngOnInit() { }
 
-  ngOnInit() {}
-
-  navigateToFilter(){
-   this.router.navigate(['/filter'])
+  navigateToFilter() {
+    this.router.navigate(['/filter'])
   }
+
+  navigateToSearch() {
+    this.router.navigate(['/product-lists'], { queryParams: { enableSearchBar: true } })
+  }
+
+  navigateToProductLists() {
+    this.router.navigate(['/product-lists'])
+  }
+
 
 }

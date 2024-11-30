@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
@@ -15,9 +16,11 @@ export class FilterComponent implements AfterViewInit {
   COLOR_TRACK = "#E5E7EB30";
   COLOR_RANGE = "#333";
   COLOR_BARS = "#FED7AA70";
-  MIN = 0; 
-  MAX = 100; 
-  STEPS = 10; 
+  MIN = 0;
+  MAX = 100;
+  STEPS = 10;
+
+  constructor(private location: Location) { }
 
   ngAfterViewInit() {
     this.initializeSliders();
@@ -101,7 +104,7 @@ export class FilterComponent implements AfterViewInit {
       const value = min + (i * step);
       const percent = (value - min) / range * 100;
       const heightPercent = (i / steps) * 100; // Height increases from 0% to 100%
-      const marker:any = document.createElement('div');
+      const marker: any = document.createElement('div');
       marker.classList.add('marker');
       marker.style.left = `${percent}%`;
       marker.style.height = `${heightPercent}%`; // Set height based on position
@@ -111,8 +114,8 @@ export class FilterComponent implements AfterViewInit {
   }
 
   updateScaleColors(from: number, to: number) {
-    const markers:any = this.scale.nativeElement.querySelectorAll<HTMLDivElement>('.marker');
-    markers.forEach((marker:any) => {
+    const markers: any = this.scale.nativeElement.querySelectorAll<HTMLDivElement>('.marker');
+    markers.forEach((marker: any) => {
       const value = parseInt(marker.dataset.value!, 10);
       if (value >= from && value <= to) {
         marker.style.setProperty('--marker-bg', this.COLOR_BARS);
@@ -120,5 +123,9 @@ export class FilterComponent implements AfterViewInit {
         marker.style.setProperty('--marker-bg', this.COLOR_TRACK);
       }
     });
+  }
+
+  goBack() {
+    this.location.back()
   }
 }
