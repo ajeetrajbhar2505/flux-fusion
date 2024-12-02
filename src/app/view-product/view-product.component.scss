@@ -4,7 +4,6 @@
   max-width: 400px;
   margin: 0 auto;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .product-details {
@@ -145,13 +144,17 @@
 
 
 .colors button.active::after {
-  content: "✔"; /* Unicode for the checkmark icon */
+  content: ""; /* Unicode for the checkmark icon */
   font-size: 20px;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+::ng-deep .colors button ion-icon{
+  font-size: 25px;
 }
 
 

@@ -34,6 +34,10 @@ button {
   cursor: pointer;
   transition: 0.3s ease;
 }
+button:active,button:hover{
+  background-color: #333;
+    color: #fff;
+}
 
 .categories,.sort-by,.ratings{
   button.active {
@@ -72,8 +76,8 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  height: 3px;
-  background: #ddd;
+  height: 2px;
+  background: #f9f9f9;
   border-radius: 5px;
   pointer-events: auto;
 }
@@ -89,6 +93,7 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   pointer-events: auto;
   position: relative;
+  margin-top: 5px;
 }
 
 .equalizer-bars {
@@ -98,6 +103,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 60px;
   margin-top: 10px;
   background: #f9f9f9;
+  box-shadow: -13px -20px 14px 0px #f9f9f9;
 }
 
 .bar {
