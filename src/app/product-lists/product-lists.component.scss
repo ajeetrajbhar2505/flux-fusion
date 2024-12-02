@@ -105,11 +105,9 @@ justify-content: unset;
 
   .product-card img {
     width: 100%;
-    height: 148px;
     object-fit: fill; /* Ensure the image scales properly */
     margin: 0 auto; /* Center the image */
     display: block; /* Ensure it's treated as a block element */
-    border-radius: 18px; /* Keep the existing border radius */
 }
 
 
