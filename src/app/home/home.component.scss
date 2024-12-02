@@ -2,6 +2,7 @@
 *{
     margin: unset;
 
+
 }
 header {
     display: flex;
@@ -128,18 +129,21 @@ header {
     margin-top: 5px;
 }
 
-.most-popular h3 {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.most-popular {
+    width: 100%;
+    h3 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
 }
-
 .filter-buttons {
     display: flex;
     gap: 10px;
-    width: 380px;
+    width: 100%;
     overflow-x: auto;
     margin-top: 20px;
     scrollbar-width: none; 
