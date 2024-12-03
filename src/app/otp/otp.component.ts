@@ -72,7 +72,7 @@ export class OtpComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this.startCounter(1500)
       this.showLoader = false
-      this.router.navigate(['home'], { skipLocationChange: true })
+      this.router.navigate(['home'], { replaceUrl: true })
       this.pin1 = ""
       this.pin2 = ""
       this.pin3 = ""

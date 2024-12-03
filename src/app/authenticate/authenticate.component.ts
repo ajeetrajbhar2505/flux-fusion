@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.scss'],
 })
-export class AuthenticateComponent implements OnInit {
+export class AuthenticateComponent implements OnInit,OnDestroy {
   continuewithSocial: boolean = true
   signUp: boolean = false
   openOTP: boolean = false
@@ -28,4 +28,10 @@ export class AuthenticateComponent implements OnInit {
   closeOTP() {
     this.openOTP = false
   }
+
+  ngOnDestroy(): void {
+    this.openOTP = false
+  }
+
+
 }

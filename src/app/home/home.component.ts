@@ -12,15 +12,15 @@ export class HomeComponent implements OnInit {
   ngOnInit() { }
 
   navigateToFilter() {
-    this.router.navigate(['/filter'])
+      this.router.navigate(['filter'])
   }
 
   navigateToSearch() {
-    this.router.navigate(['/product-lists'], { queryParams: { enableSearchBar: true } })
+    this.router.navigate(['/product-lists'], {replaceUrl: true, queryParams: { enableSearchBar: true } })
   }
 
   navigateToProductLists() {
-    this.router.navigate(['/product-lists'])
+    this.router.navigate(['/product-lists'],{replaceUrl: true})
   }
 
 
