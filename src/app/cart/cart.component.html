@@ -48,7 +48,7 @@
   </div>
 
 
-  <div class="cart-item">
+  <div class="cart-item" *ngFor="let item of [1,2]">
       <img src="https://static.zara.net/assets/public/374d/63c5/e3274f6980f6/61778ff5ecd1/04442330401-e1/04442330401-e1.jpg?ts=1732696996261&w=563"
           alt="Item Image">
       <div class="cart-main">
@@ -67,4 +67,15 @@
       </div>
 
   </div>
+</div>
+
+<div class="payment-details">
+    <div class="price-details">
+        <p>Total Price:</p>
+        <span class="price">  $320.00</span>
+        </div>
+      
+       <div class="buy-button">
+        <button class="add-to-cart">Checkout <ion-icon size="medium"  class="ionic-icon" name="arrow-forward-outline"></ion-icon></button>
+       </div>
 </div>

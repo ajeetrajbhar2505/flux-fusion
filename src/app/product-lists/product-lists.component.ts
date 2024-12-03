@@ -26,11 +26,11 @@ export class ProductListsComponent {
   }
 
   goBack() {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home'],{replaceUrl : true})
   }
 
   viewProduct(productImageId: number) {
-    this.router.navigate(['/view-product'], { queryParams: { productImageId } })
+    this.router.navigate(['/view-product'], {queryParams: { productImageId } })
   }
 
   navigateToFilter() {
