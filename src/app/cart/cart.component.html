@@ -1,81 +1,42 @@
 <div collapse="fade" class="ion-no-border">
-  <div class="ion-toolbar">
-    <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
-    <div class="ionic-title">My Cart</div>
-  </div>
+    <div class="ion-toolbar">
+        <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
+        <div class="ionic-title">My Cart</div>
+    </div>
 </div>
 
 <div class="cart">
-  <div class="cart-item">
-      <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,q_auto:eco,dpr_2,f_auto,fl_progressive//cultgear-content/9Q4jSZF4G1Hrm8fdEAsqv1uf"
-          alt="Item Image">
-      <div class="cart-main">
-          <div class="cart-details">
-              <h2>Sneaker Shoes</h2>
-              <p>Color | Size = M</p>
-              <h2>$35.00</h2>
-          </div>
-          <div class="cart-details gap-grid">
+    <div class="cart-item" *ngFor="let data of products;">
+        <img [src]="'assets/' + data.folder + '/' + (1) +'.webp'" [alt]="data.productName">
+        <div class="cart-main">
+            <div class="cart-details">
+                <h2>{{data.productName}}</h2>
+                <p>Color | Size = M</p>
+                <h2>{{data.productAmount | currency}}</h2>
+            </div>
+            <div class="cart-details gap-grid">
 
-              <div class="quantity-control">
-                  <button>-</button>
-                  <div class="quantity">1</div>
-                  <button>+</button>
-              </div>
-          </div>
-      </div>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <div class="quantity">1</div>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
 
-  </div>
-
-  <div class="cart-item">
-      <img src="https://static.zara.net/assets/public/1948/0da3/7eb8480dab10/242cad4992a6/05679250401-e1/05679250401-e1.jpg?ts=1723646364623&w=315"
-          alt="Item Image">
-      <div class="cart-main">
-          <div class="cart-details">
-              <h2>Relaxed-fit shirt</h2>
-              <p>Color | Size = M</p>
-              <h2>$385.00</h2>
-          </div>
-          <div class="cart-details gap-grid">
-              <div class="quantity-control">
-                  <button>-</button>
-                  <div class="quantity">1</div>
-                  <button>+</button>
-              </div>
-          </div>
-      </div>
-
-  </div>
+    </div>
 
 
-  <div class="cart-item">
-      <img src="https://static.zara.net/assets/public/374d/63c5/e3274f6980f6/61778ff5ecd1/04442330401-e1/04442330401-e1.jpg?ts=1732696996261&w=563"
-          alt="Item Image">
-      <div class="cart-main">
-          <div class="cart-details    ">
-              <h2>Boxers</h2>
-              <p>Color | Size = L</p>
-              <h2>$285.00</h2>
-          </div>
-          <div class="cart-details gap-grid">
-              <div class="quantity-control">
-                  <button>-</button>
-                  <div class="quantity">1</div>
-                  <button>+</button>
-              </div>
-          </div>
-      </div>
-
-  </div>
 </div>
 
 <div class="payment-details">
     <div class="price-details">
         <p>Total Price:</p>
-        <span class="price">  $320.00</span>
-        </div>
-      
-       <div class="buy-button">
-        <button class="add-to-cart">Checkout <ion-icon size="medium"  class="ionic-icon" name="arrow-forward-outline"></ion-icon></button>
-       </div>
+        <span class="price"> $108.00</span>
+    </div>
+
+    <div class="buy-button">
+        <button class="add-to-cart">Checkout <ion-icon size="medium" class="ionic-icon"
+                name="arrow-forward-outline"></ion-icon></button>
+    </div>
 </div>
