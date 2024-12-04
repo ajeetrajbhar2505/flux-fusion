@@ -132,14 +132,14 @@
     color: white;
     border: none;
     padding: 15px 10px 15px 10px;
-    width: 100%;
+    max-width: 100%;
+    width: 240px;
     border-radius: 25px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
 }
 
 .add-to-cart:hover {
@@ -176,9 +176,11 @@
     display: flex;
     padding: 10px 20px;
     position: fixed;
+    gap: 30px;
     bottom: 0;
-    width: 100%;
     background: #fff;
     border-top-right-radius: 20px;
+    width: 100%;
     border-top-left-radius: 20px;
 }
+
