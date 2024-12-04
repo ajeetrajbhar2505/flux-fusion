@@ -45,4 +45,13 @@ export class ProductListsComponent {
       : [];
   }
 
+  calculatePercentageOff(originalPrice: number, salePrice: number): number {
+    if (originalPrice <= 0) {
+        throw new Error("Original price must be greater than 0.");
+    }
+    const discount = originalPrice - salePrice;
+    const percentageOff = (discount / originalPrice) * 100;
+    return Math.round(percentageOff);
+}
+
 }

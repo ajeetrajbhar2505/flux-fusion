@@ -1,7 +1,7 @@
 <div collapse="fade" class="ion-no-border">
     <div class="ion-toolbar">
         <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
-        <div class="ionic-title">My Cart</div>
+        <div class="ionic-title">Checkout</div>
     </div>
 </div>
 
@@ -15,11 +15,8 @@
                 <h2>{{data.productAmount | currency}}</h2>
             </div>
             <div class="cart-details gap-grid">
-                <ion-icon name="trash-outline"></ion-icon>
                 <div class="quantity-control">
-                    <button>-</button>
-                    <div class="quantity">1</div>
-                    <button>+</button>
+                    <button>1</button>
                 </div>
             </div>
         </div>
@@ -30,13 +27,8 @@
 </div>
 
 <div class="payment-details">
-    <div class="price-details">
-        <p>Total Price:</p>
-        <span class="price"> $108.00</span>
-    </div>
-
-    <div class="buy-button">
-        <button class="add-to-cart" (click)="continueToCheckout()">Checkout <ion-icon size="medium" class="ionic-icon"
+    <div class="buy-button" (click)="createRzpayOrder(200,'INR')">
+        <button class="add-to-cart">Continue to payment <ion-icon size="medium" class="ionic-icon"
                 name="arrow-forward-outline"></ion-icon></button>
     </div>
 </div>

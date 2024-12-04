@@ -36,8 +36,7 @@
     <div class="product-card" *ngFor="let data of (search ? filteredProducts:products);let i  = index" (click)="viewProduct(i+1)">
       <img [src]="'assets/' + data.folder + '/' + (1) +'.webp'" [alt]="data.productName">
       <h3>{{data.productName}}</h3>
-      <p class="rating"><span class="price">${{data.productAmount}}</span> | <button>{{data.totalProductsSold}}
-          sold</button></p>
+      <p>FLAT {{calculatePercentageOff(data.productAmount,(data.productAmount - 7))}}% OFF | <span class="price">{{(data.productAmount - 7) | currency}}</span> </p>
     </div>
   </div>
 </div>
