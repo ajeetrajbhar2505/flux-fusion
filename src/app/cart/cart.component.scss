@@ -12,8 +12,8 @@
 
 .gap-grid {
     display: grid;
-    align-items: center;
-    justify-content: space-between;
+        justify-items: end;
+        align-content: space-between;
 }
 
 @media (min-width: 768px) {
@@ -44,8 +44,9 @@
 
 .cart-details h2 {
     margin: 0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
+    line-height: 25px;
 }
 
 .cart-details p {
@@ -117,7 +118,7 @@
 
 .price {
     margin: 20px 0;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
   }
   

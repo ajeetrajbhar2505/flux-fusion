@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './cart.component';
 import { IonicModule } from '@ionic/angular';
+import { RazorpayService } from '../razorpay.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     CommonModule,
     CartRoutingModule,
-    IonicModule
-  ]
+    IonicModule,
+    HttpClientModule
+  ],
+  providers : [RazorpayService]
 })
 export class CartModule { }

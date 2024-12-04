@@ -15,7 +15,7 @@
                 <h2>{{data.productAmount | currency}}</h2>
             </div>
             <div class="cart-details gap-grid">
-
+                <ion-icon name="trash-outline"></ion-icon>
                 <div class="quantity-control">
                     <button>-</button>
                     <div class="quantity">1</div>
@@ -35,7 +35,7 @@
         <span class="price"> $108.00</span>
     </div>
 
-    <div class="buy-button">
+    <div class="buy-button" (click)="createRzpayOrder(200,'INR')">
         <button class="add-to-cart">Checkout <ion-icon size="medium" class="ionic-icon"
                 name="arrow-forward-outline"></ion-icon></button>
     </div>
