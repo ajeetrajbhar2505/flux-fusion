@@ -23,27 +23,17 @@
     
     <div class="box box-two" *ngIf="!continuewithSocial">
         <h2>Let's you in</h2>
-        <div class="input-container" *ngIf="signUp">
-            <i class="fa fa-user"></i>
-            <input type="text" placeholder="Name" class="input-field" />
-        </div>
         <div class="input-container">
-            <i class="fa fa-envelope"></i>
-            <input type="email" placeholder="Email" class="input-field" />
-        </div>
-        <div class="input-container">
-            <i class="fa fa-lock"></i>
-            <input type="password" placeholder="Password" class="input-field" />
+            <span class="fa">🇮🇳 +91 </span>
+            <input type="text" placeholder="Mobile Number" class="input-field" />
         </div>
        <div class="forgot-main" *ngIf="!signUp" routerLink="/reset-passwprd">
         <p routerLink="/reset-passwprd">Forgot Password ?</p>
        </div>
     </div>
     <div class="box-two">
-        <button [class]="!continuewithSocial?'mt-30 next-btn':'next-btn'" (click)="!continuewithSocial?generateOTP():continuewithSocial = false">{{!continuewithSocial?(signUp?'Signup':'Login'):'Sign in with password'}}</button>
+        <button [class]="!continuewithSocial?'mt-30 next-btn':'next-btn'" (click)="!continuewithSocial?generateOTP():continuewithSocial = false">{{!continuewithSocial?'Continue':'Sign in with Mobile'}}</button>
     </div>
-    <p>{{signUp?"Don't":'Do you '}} have an account <a (click)="signUp = !signUp;continuewithSocial = false">{{!signUp?'Sign Up':'Login In'}}</a></p>
-
     <h5 *ngIf="!continuewithSocial">Or</h5>
     <div class="box box-one" *ngIf="!continuewithSocial">
         <button (click)="navigateToOTPPage()">

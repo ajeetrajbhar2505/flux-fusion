@@ -96,10 +96,9 @@ header {
 }
 
 .offer-card img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
-    margin-left: 10px;
 }
 
 .categories {
@@ -163,4 +162,8 @@ header {
 .filter-buttons button:hover {
     background-color: #333;
     color: #fff;
+}
+
+.morning-msg{
+    margin-left: 10px;
 }

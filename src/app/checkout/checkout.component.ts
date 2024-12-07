@@ -102,8 +102,5 @@ export class CheckoutComponent implements OnInit {
     );
   }
 
-  editLocation() {
-    this.router.navigate(['/location'], { replaceUrl: true })
-  }
 
 }

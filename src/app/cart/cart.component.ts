@@ -27,4 +27,8 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/checkout'], { replaceUrl: true })
   }
 
+  removeProduct(i:number){
+    this.products.splice(i, 1)
+  }
+
 }
