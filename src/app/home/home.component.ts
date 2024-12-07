@@ -14,6 +14,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() { }
 
+  navigateToRegister(){
+    this.signup = false
+    this.router.navigate(['authenticate'])
+  }
+
   toogleSinup(){
     this.signup = !this.signup
   }

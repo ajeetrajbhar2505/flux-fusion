@@ -12,11 +12,11 @@
         <ion-icon (click)="toogleSinup()" name="close-outline"></ion-icon>
         </span>
         <p>To access your Flux Fashion account </p>
-        <button routerLink="/authenticate">Signup</button>
+        <button (click)="navigateToRegister()">Signup</button>
       </div>
     </div>
     <div class="header-right">
-    <ion-icon  size="large" routerLink="/cart" name="bag-handle-outline"></ion-icon>
+    <ion-icon  routerLink="/cart" name="bag-handle-outline"></ion-icon>
       <!-- <img src="assets/notifications.png" width="30px" alt=""> -->
       <!-- <img src="assets/notifications-msg.png" width="30px" alt=""> -->
     </div>

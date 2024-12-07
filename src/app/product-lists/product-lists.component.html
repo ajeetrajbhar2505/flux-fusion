@@ -36,7 +36,9 @@
     <div class="product-card" *ngFor="let data of (search ? filteredProducts:products);let i  = index" (click)="viewProduct(i+1)">
       <img [src]="'assets/' + data.folder + '/' + (1) +'.webp'" [alt]="data.productName">
       <h3>{{data.productName}}</h3>
-      <p>FLAT {{calculatePercentageOff(data.productAmount,(data.productAmount - 7))}}% OFF | <span class="price">{{(data.productAmount - 7) | currency}}</span> </p>
+      <p><span class="price">{{(data.productAmount - 7) | currency}}</span> <del> {{(data.productAmount) | currency}} </del> {{calculatePercentageOff(data.productAmount,(data.productAmount - 7))}}% off </p>
+      <p class="rating"> <ion-icon size="medium" class="ionic-icon"
+        name="star-half-outline"></ion-icon> 4.8 (4,749 reviews)</p>
     </div>
   </div>
 </div>
