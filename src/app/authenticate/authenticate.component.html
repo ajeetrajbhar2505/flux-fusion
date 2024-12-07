@@ -15,8 +15,8 @@
             <span>Continue with Google</span>
         </button>
         <button (click)="navigateToOTPPage()">
-            <img loading="lazy" src="assets/apple.png" width="19">
-            <span>Continue with Apple</span>
+            <img loading="lazy" src="assets/facebook.webp" width="19">
+            <span>Continue with Facebook</span>
         </button>
     </div>
     <h5 *ngIf="continuewithSocial">Or</h5>
@@ -27,9 +27,6 @@
             <span class="fa">🇮🇳 +91 </span>
             <input type="text" placeholder="Mobile Number" class="input-field" />
         </div>
-       <div class="forgot-main" *ngIf="!signUp" routerLink="/reset-passwprd">
-        <p routerLink="/reset-passwprd">Forgot Password ?</p>
-       </div>
     </div>
     <div class="box-two">
         <button [class]="!continuewithSocial?'mt-30 next-btn':'next-btn'" (click)="!continuewithSocial?generateOTP():continuewithSocial = false">{{!continuewithSocial?'Continue':'Sign in with Mobile'}}</button>
@@ -41,8 +38,8 @@
             <span>Continue with Google</span>
         </button>
         <button (click)="navigateToOTPPage()">
-            <img loading="lazy" src="assets/apple.png" width="19">
-            <span>Continue with Apple</span>
+            <img loading="lazy" src="assets/facebook.webp" width="19">
+            <span>Continue with Facebook</span>
         </button>
     </div>
 </div>
