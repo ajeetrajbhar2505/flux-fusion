@@ -7,10 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public router: Router) { }
+  signup:boolean = false
+  constructor(public router: Router) { 
+    this.signup = false
+  }
 
   ngOnInit() { }
 
+  toogleSinup(){
+    this.signup = !this.signup
+  }
   navigateToFilter() {
       this.router.navigate(['filter'])
   }
