@@ -4,8 +4,12 @@
 
 .cart {
     display: grid;
-    padding: 10px;
+    padding: 0 5px 0 20px;
     gap: 10px;
+    h1{
+        font-size: 1rem;
+        font-weight: 800;
+    }
 }
 
 .cart-main {
@@ -34,6 +38,9 @@
     background-color: white;
     border-radius: 10px;
     padding: 10px;
+    .location{
+        font-size: 40px !important;
+    }
 }
 
 .cart-item img {
@@ -172,7 +179,7 @@
 .payment-details {
     display: flex;
     padding: 10px 20px;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     background: #fff;

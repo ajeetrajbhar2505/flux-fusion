@@ -6,6 +6,26 @@
 </div>
 
 <div class="cart">
+    <h1>Shipping Address</h1>
+    <div class="cart-item">
+        <ion-icon class="location" name="location"></ion-icon>
+        <div class="cart-main">
+            <div class="cart-details">
+                <h2> 5284+3F5, Yadav Nagar, Airoli Naka, Airoli, Navi Mumbai, Maharashtra 400708 </h2>
+            </div>
+            <div class="cart-details gap-grid">
+                <div class="quantity-control">
+                    <ion-icon name="create-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="cart">
+    <h1>Order List</h1>
     <div class="cart-item" *ngFor="let data of products;">
         <img [src]="'assets/' + data.folder + '/' + (1) +'.webp'" [alt]="data.productName">
         <div class="cart-main">
@@ -22,8 +42,6 @@
         </div>
 
     </div>
-
-
 </div>
 
 <div class="payment-details">
