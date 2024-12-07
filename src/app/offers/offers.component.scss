@@ -1,0 +1,45 @@
+::ng-deep .ion-page {
+    justify-content: unset;
+}
+
+.special-offers h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin:20px;
+    padding: 15px;
+}
+
+.offer-text h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #333;
+    font-weight: 700;
+}
+
+.offer-text p {
+    font-size: 14px;
+    font-weight: 800;
+    color: #666;
+    margin-top: 5px;
+}
+
+.offer-text small {
+    font-size: 12px;
+    color: #999;
+}
+
+.offer-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
