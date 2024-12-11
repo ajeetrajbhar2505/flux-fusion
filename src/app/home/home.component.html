@@ -41,16 +41,8 @@
         </div>
         <img loading="lazy" [src]="data.image" [alt]="data.alt">
       </div>
-      <div class="slider-buttons">
-        <input
-          type="radio"
-          *ngFor="let data of offers; let i = index"
-          [checked]="i === activeSlide"
-          (click)="setActiveSlide(i)"
-        />
-      </div>
+  
     </div>
-
   </section>
 
   <section class="categories">

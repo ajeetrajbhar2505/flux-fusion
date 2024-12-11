@@ -46,11 +46,7 @@ export class HomeComponent implements OnInit {
     this.signup = false
     this.router.navigate(['authenticate'])
   }
-
-
-  setActiveSlide(i:number){
-    this.activeSlide = i
-  }
+  
   toogleSinup(){
     this.signup = !this.signup
   }
