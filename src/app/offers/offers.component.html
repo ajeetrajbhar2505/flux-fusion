@@ -1,36 +1,15 @@
 <div collapse="fade" class="ion-no-border">
   <div class="ion-toolbar">
       <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
-      <div class="ionic-title">Checkout</div>
+      <div class="ionic-title">Offers</div>
   </div>
 </div>
 <section class="special-offers">
-  <div class="offer-card">
+  <div class="offer-card" *ngFor="let data of offers">
     <div class="offer-text">
-      <h2>30%</h2>
-      <p>Today's Special!<br><small>Get discount for every order, only valid for today</small></p>
+      <h2>{{data.discount}}</h2>
+      <p [innerHTML]="data.description"></p>
     </div>
-    <img loading="lazy" src="assets/offers/shirt.png" alt="Offer Image">
-  </div>
-  <div class="offer-card">
-    <div class="offer-text">
-      <h2>65%</h2>
-      <p>Today's Special!<br><small>Get discount for every order, only valid for today</small></p>
-    </div>
-    <img loading="lazy" src="assets/offers/bags.avif" alt="Offer Image">
-  </div>
-  <div class="offer-card">
-    <div class="offer-text">
-      <h2>15%</h2>
-      <p>Today's Special!<br><small>Get discount for every order, only valid for today</small></p>
-    </div>
-    <img loading="lazy" src="assets/offers/t-shirt.png" alt="Offer Image">
-  </div>
-  <div class="offer-card">
-    <div class="offer-text">
-      <h2>80%</h2>
-      <p>Today's Special!<br><small>Get discount for every order, only valid for today</small></p>
-    </div>
-    <img loading="lazy" src="assets/shirt-1/t-shirt.png" alt="Offer Image">
+    <img loading="lazy" [src]="data.image" [alt]="data.alt">
   </div>
 </section>

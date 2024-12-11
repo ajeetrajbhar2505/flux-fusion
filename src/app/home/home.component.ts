@@ -8,6 +8,34 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   signup:boolean = false
+  activeSlide:number = 0
+  offers = [
+    {
+      discount: "30%",
+      description: "Today's Special!<br><small> Get discount for every order, only valid for today</small>",
+      image: "assets/offers/shirt.png",
+      alt: "Offer Image"
+    },
+    {
+      discount: "65%",
+      description: "Today's Special!<br><small> Get discount for every order, only valid for today</small>",
+      image: "assets/offers/bags.avif",
+      alt: "Offer Image"
+    },
+    {
+      discount: "15%",
+      description: "Today's Special!<br><small> Get discount for every order, only valid for today</small>",
+      image: "assets/offers/t-shirt.png",
+      alt: "Offer Image"
+    },
+    {
+      discount: "80%",
+      description: "Today's Special!<br><small> Get discount for every order, only valid for today</small>",
+      image: "assets/offers/shirt.png",
+      alt: "Offer Image"
+    }
+  ];
+
   constructor(public router: Router) { 
     this.signup = false
   }
@@ -19,6 +47,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['authenticate'])
   }
 
+
+  setActiveSlide(i:number){
+    this.activeSlide = i
+  }
   toogleSinup(){
     this.signup = !this.signup
   }

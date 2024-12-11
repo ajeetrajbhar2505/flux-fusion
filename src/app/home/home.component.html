@@ -8,15 +8,15 @@
       </div>
       <div class="menu" *ngIf="signup">
         <span>
-        <h1>Hello User</h1>
-        <ion-icon (click)="toogleSinup()" name="close-outline"></ion-icon>
+          <h1>Hello User</h1>
+          <ion-icon (click)="toogleSinup()" name="close-outline"></ion-icon>
         </span>
         <p>To access your Flux Fashion account </p>
         <button (click)="navigateToRegister()">Signup</button>
       </div>
     </div>
     <div class="header-right">
-    <ion-icon  routerLink="/cart" name="bag-handle-outline"></ion-icon>
+      <ion-icon routerLink="/cart" name="bag-handle-outline"></ion-icon>
       <!-- <img src="assets/notifications.png" width="30px" alt=""> -->
       <!-- <img src="assets/notifications-msg.png" width="30px" alt=""> -->
     </div>
@@ -30,13 +30,27 @@
 
   <section class="special-offers">
     <h3>Special Offers <span routerLink="/offers">See All</span></h3>
-    <div class="offer-card">
-      <div class="offer-text">
-        <h2>30%</h2>
-        <p>Today's Special!<br><small>Get discount for every order, only valid for today</small></p>
+    <div class="product-image">
+      <div 
+        class="offer-card" 
+        *ngFor="let data of offers; let i = index" 
+        [class.active]="i === activeSlide">
+        <div class="offer-text">
+          <h2>{{data.discount}}</h2>
+          <p [innerHTML]="data.description"></p>
+        </div>
+        <img loading="lazy" [src]="data.image" [alt]="data.alt">
       </div>
-      <img loading="lazy" src="assets/offers/shirt.png" alt="Offer Image">
+      <div class="slider-buttons">
+        <input
+          type="radio"
+          *ngFor="let data of offers; let i = index"
+          [checked]="i === activeSlide"
+          (click)="setActiveSlide(i)"
+        />
+      </div>
     </div>
+
   </section>
 
   <section class="categories">
