@@ -34,7 +34,7 @@
       <div 
         class="offer-card" 
         *ngFor="let data of offers; let i = index" 
-        [class.active]="i === activeSlide">
+        [class.active]="i === activeSlide" routerLink="/view-offers">
         <div class="offer-text">
           <h2>{{data.discount}}</h2>
           <p [innerHTML]="data.description"></p>

@@ -1,0 +1,86 @@
+::ng-deep .ion-page {
+  justify-content: unset;
+}
+
+.container {
+  padding: 0 20px 40px 20px;
+  border-radius: unset;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.coupon-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.coupon {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.coupon-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  font-weight: 800;
+  justify-content: space-between;
+}
+
+.coupon-desc {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+ul {
+  font-size: 12px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  li {
+    line-height: 18px;
+  }
+}
+
+.coupon-expiry {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #888;
+}
+
+.qr-code {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.brand {
+  color: red;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+.coupon-right {
+  text-align: center;
+}
+
+.copy-coupons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  button{
+    padding: 10px 35px;
+  }
+  .coupon-details{
+    text-transform: uppercase;
+    border: dotted;
+    background: transparent;
+  }
+}

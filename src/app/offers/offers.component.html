@@ -5,7 +5,7 @@
   </div>
 </div>
 <section class="special-offers">
-  <div class="offer-card" *ngFor="let data of offers">
+  <div class="offer-card" *ngFor="let data of offers" routerLink="/view-offers">
     <div class="offer-text">
       <h2>{{data.discount}}</h2>
       <p [innerHTML]="data.description"></p>
