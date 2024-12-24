@@ -24,6 +24,7 @@
 }
 
 .coupon-title {
+  color: #ff0000;
   font-size: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -54,8 +55,8 @@ ul {
 }
 
 .qr-code {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
 }
 
@@ -74,9 +75,17 @@ ul {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
   button{
     padding: 10px 35px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: none;
+    cursor: pointer;
+    background: #333;
+  }
+  .copy{
+    color: white;
   }
   .coupon-details{
     text-transform: uppercase;
