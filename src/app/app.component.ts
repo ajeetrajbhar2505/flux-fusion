@@ -11,11 +11,16 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
+
     // Listen for navigation events
     this.router.events.subscribe(event => {
+      this.showLoader = true
       if (event instanceof NavigationEnd) {
         // Hide loader after navigation completes
-        this.showLoader = false;
+        setTimeout(() => {
+          this.showLoader = false
+        }, 1000);
+        
       }
     });
   }
