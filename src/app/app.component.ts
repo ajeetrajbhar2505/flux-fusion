@@ -11,10 +11,8 @@ export class AppComponent {
   constructor(private router: Router) { }
   hideNavigationMenu: boolean = true
   ngOnInit() {
-
     // Listen for navigation events
     this.router.events.subscribe(event => {
-      this.showLoader = true
       if (event instanceof NavigationEnd) {
 
         const hiddenRoutes = [
@@ -26,15 +24,18 @@ export class AppComponent {
           '/view-offers',
           '/product-lists'
         ];
-        
+
         const currentRoute = event.url.split('?')[0]; // Remove query parameters
         this.hideNavigationMenu = hiddenRoutes.includes(currentRoute);
-        
 
+        if (currentRoute == '/home') {
+          this.showLoader = true
+        }
         // Hide loader after navigation completes
         setTimeout(() => {
           this.showLoader = false
         }, 1000);
+
 
       }
     });
