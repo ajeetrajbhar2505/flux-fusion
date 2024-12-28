@@ -24,7 +24,6 @@
 }
 
 .coupon-title {
-  color: #ff0000;
   font-size: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -33,14 +32,13 @@
 }
 
 .coupon-desc {
-  font-size: 14px;
   margin-bottom: 10px;
   font-weight: 800;
+  font-size: 15px;
 }
 
 ul {
-  font-size: 12px;
-  margin-left: 15px;
+  font-size: 15px;
   margin-bottom: 10px;
 
   li {
@@ -55,8 +53,8 @@ ul {
 }
 
 .qr-code {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
 }
 

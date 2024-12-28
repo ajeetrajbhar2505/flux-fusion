@@ -2,13 +2,19 @@
     justify-content: unset;
 }
 
-.special-offers h3 {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.special-offers 
+{
+    margin-bottom: 30px;
+    h3 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
 }
+
 
 .offer-card {
     display: flex;
@@ -16,7 +22,7 @@
     background-color: #f5f5f5;
     border-radius: 10px;
     margin:20px;
-    padding: 15px;
+    padding: 22px 22px;
 }
 
 .offer-text h2 {
@@ -27,7 +33,7 @@
 }
 
 .offer-text p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 800;
     color: #666;
     margin-top: 5px;
