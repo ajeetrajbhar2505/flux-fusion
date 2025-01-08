@@ -1,18 +1,18 @@
 <div class="tabs">
 	<div role="tablist" aria-label="Navigation">
-		<button role="tab">
+		<button role="tab" routerLinkActive="/home">
 			<ion-icon routerLink="/home" name="storefront-outline"></ion-icon>
 		</button>
-		<button role="tab">
+		<button role="tab" routerLinkActive="/cart">
 			<ion-icon routerLink="/cart" name="bag-handle-outline"></ion-icon>
 		</button>
-		<button role="tab">
-			<img routerLink="orders" src="assets/shopping.svg" alt="" style="width: 30px;">
+		<button role="tab" routerLinkActive="/orders">
+			<img routerLink="/orders" src="assets/shopping.svg" alt="" style="width: 30px;">
 		</button>
-		<button role="tab">
+		<button role="tab" routerLinkActive="/offers">
 			<ion-icon routerLink="/offers" name="wallet-outline"></ion-icon>
 		</button>
-		<button role="tab">
+		<button role="tab" routerLinkActive="/">
 			<ion-icon routerLink="/" name="person-outline"></ion-icon>
 		</button>
 	</div>
