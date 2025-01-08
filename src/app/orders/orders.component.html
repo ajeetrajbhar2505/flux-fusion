@@ -1,0 +1,48 @@
+<div collapse="fade" class="ion-no-border">
+  <div class="ion-toolbar">
+    <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
+    <div class="ionic-title">Orders</div>
+  </div>
+</div>
+
+<div class="tabs-container">
+  <div class="tabs">
+    <div class="tab-links">
+      <button class="tab-link {{activeTabIndex == 1?'active':''}}" (click)="activateTab(1)"
+        data-tab="tab-1">Ongoing</button>
+      <button class="tab-link {{activeTabIndex == 2?'active':''}}" (click)="activateTab(2)"
+        data-tab="tab-2">Completed</button>
+    </div>
+
+    <div class="tab-content {{activeTabIndex == 1?'active':''}}" id="tab-1">
+      <h2>Overview</h2>
+      <p>Welcome to our modern tabbed interface! Enjoy smooth transitions, vibrant gradients, and responsive design.
+        Whether you’re browsing on mobile or desktop, everything adapts seamlessly.</p>
+      <button class="cta-btn">Learn More</button>
+    </div>
+
+    <div class="tab-content {{activeTabIndex == 2?'active':''}}" id="tab-2">
+      <div class="cart">
+        <div class="cart-item" *ngFor="let data of products;let i = index">
+          <img [src]="'assets/' + data.folder + '/' + (1) +'.webp'" [alt]="data.productName">
+          <div class="cart-main">
+            <div class="cart-details">
+              <h2>{{data.productName}}</h2>
+              <p>Color | Size = M</p>
+              <button class="completed-flag">Completed</button>
+              <div class="review-section">
+                <h2>{{data.productAmount | currency}}</h2>
+                <button>leave review</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

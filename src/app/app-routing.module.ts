@@ -52,6 +52,10 @@ const routes: Routes = [
     path: 'view-offers',
     loadChildren: () => import('./view-offer/view-offer.module').then(m => m.ViewOfferModule)
   },
+  {
+    path: 'orders',
+    loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule)
+  },
 ];
 @NgModule({
   imports: [
