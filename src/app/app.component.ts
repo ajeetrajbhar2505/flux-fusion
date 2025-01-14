@@ -28,9 +28,9 @@ export class AppComponent {
         const currentRoute = event.url.split('?')[0]; // Remove query parameters
         this.hideNavigationMenu = hiddenRoutes.includes(currentRoute);
 
-        if (currentRoute == '/home') {
-          this.showLoader = true
-        }
+        // if (currentRoute == '/home') {
+        //   this.showLoader = true
+        // }
         // Hide loader after navigation completes
         setTimeout(() => {
           this.showLoader = false

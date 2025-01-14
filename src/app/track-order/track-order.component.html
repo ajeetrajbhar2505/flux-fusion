@@ -1,0 +1,27 @@
+<div collapse="fade" class="ion-no-border">
+  <div class="ion-toolbar">
+    <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
+    <div class="ionic-title">Orders</div>
+  </div>
+</div>
+
+<div class="tabs-container">
+      <div class="cart">
+        <div class="cart-item" *ngFor="let data of products;let i = index">
+          <img [src]="'assets/' + data.folder + '/' + (1) +'.webp'" [alt]="data.productName">
+          <div class="cart-main">
+            <div class="cart-details">
+              <h2>{{data.productName}}</h2>
+              <p>Qty = {{i+1}} | Size = M</p>
+              <div class="review-section">
+                <h2>{{data.productAmount | currency}}</h2>
+              </div>
+            </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

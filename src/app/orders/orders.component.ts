@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./orders.component.scss'],
 })
 export class OrdersComponent implements OnInit {
-  activeTabIndex: number = 2
+  activeTabIndex: number = 1
   products: any[] = [
     { productName: 'Blue Shirt', folder: 'shirt-1', productAmount: '23', totalProductsSold: 1323 },
     { productName: 'Pink Shirt', folder: 'shirt-2', productAmount: '22', totalProductsSold: 423 },
