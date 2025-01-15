@@ -24,8 +24,9 @@ export class OrdersComponent implements OnInit {
   ngOnInit() {
     for (let index = 0; index < this.starCount; index++) {
       this.ratingArr.push({
-        rated : Math.random() < 0.5,
+        rated : false,
       });
+      this.ratingArr[index].rated = index < 3
     }
   }
 

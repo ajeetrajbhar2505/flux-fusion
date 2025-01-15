@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class TrackOrderComponent  implements OnInit {
   products: any[] = [
-    { productName: 'Blue Shirt', folder: 'shirt-1', productAmount: '23', totalProductsSold: 1323 },
+    { productName: 'Double Cuff Blue Shirt', folder: 'shirt-1', productAmount: '23', totalProductsSold: 1323 },
   ]
   constructor(private router:Router) { }
 

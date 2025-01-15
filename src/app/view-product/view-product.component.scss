@@ -27,7 +27,6 @@
       margin-right: 10px;
       font-size: 12px;
       padding: 10px;
-      border-radius: 5px;
     }
   }
 }
@@ -104,10 +103,18 @@
   line-height: 1.5;
   color: #666;
 }
+.watch-later{
+  display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
 
 .options {
   width: 100%;
   display: grid;
+      align-items: center;
+      justify-items: end;
+      justify-content: start;
 }
 
 .options .label {
@@ -127,7 +134,6 @@
 .sizes button,
 .colors button {
   border: 1px solid #ccc;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
   background: none;
