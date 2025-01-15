@@ -46,7 +46,8 @@
               <button class="completed-flag">Completed</button>
               <div class="review-section">
                 <h2>{{data.productAmount | currency}}</h2>
-                <button>Leave Review</button>
+                <div class="ratings"><ion-icon [name]="data.rated?'star':'star-outline'"
+                    *ngFor="let data of ratingArr;let i = index" (click)="onClick(i+1)"></ion-icon></div>
               </div>
             </div>
 

@@ -14,15 +14,33 @@ export class OrdersComponent implements OnInit {
     { productName: 'Colour Combo Shirt', folder: 'shirt-3', productAmount: '23', totalProductsSold: 2323 },
     { productName: 'Black Shirt', folder: 'shirt-4', productAmount: '40', totalProductsSold: 8223 },
   ]
-  constructor(private router:Router) { }
 
-  ngOnInit() { }
+  starCount: number = 5
+ ratingArr: any[] = [];
+
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    for (let index = 0; index < this.starCount; index++) {
+      this.ratingArr.push({
+        rated : Math.random() < 0.5,
+      });
+    }
+  }
+
+  onClick(rating: number) {
+    for (let i = 0; i < this.ratingArr.length; i++) {
+      this.ratingArr[i].rated = i < rating;
+    }
+    return false;
+  }
 
   activateTab(active: number) {
     this.activeTabIndex = active
   }
 
-  removeProduct(i:number){
+  removeProduct(i: number) {
     this.products.splice(i, 1)
   }
 
