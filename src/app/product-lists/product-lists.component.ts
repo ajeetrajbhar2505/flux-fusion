@@ -11,10 +11,10 @@ export class ProductListsComponent {
   @Input() search: boolean = false
   searchQuery: string = '';
   products: any[] = [
-    { productName: 'Blue Shirt', folder : 'shirt-1', productAmount: '23', totalProductsSold: 1323 },
-    { productName: 'Pink Shirt', folder : 'shirt-2', productAmount: '22', totalProductsSold: 423 },
-    { productName: 'Colour Combo Shirt', folder : 'shirt-3', productAmount: '23', totalProductsSold: 2323 },
-    { productName: 'Black Shirt', folder : 'shirt-4', productAmount: '40', totalProductsSold: 8223 },
+    { productName: 'Blue Shirt', folder : 'shirt-1', productAmount: '999', totalProductsSold: 1323 },
+    { productName: 'Pink Shirt', folder : 'shirt-2', productAmount: '999', totalProductsSold: 423 },
+    { productName: 'Colour Combo Shirt', folder : 'shirt-3', productAmount: '999', totalProductsSold: 2323 },
+    { productName: 'Black Shirt', folder : 'shirt-4', productAmount: '999', totalProductsSold: 8223 },
   ]
   filteredProducts: any[] = [];
 
