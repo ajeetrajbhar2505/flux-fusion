@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   arialSelected: number = 0
-  constructor() { }
+  router: string = '';
 
-  ngOnInit() { }
+  constructor(private routerService: Router) {}
+
+  ngOnInit() {
+    this.routerService.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.router = event.urlAfterRedirects;
+      }
+    });
+   }
 
   changeArialSelected(arialSelected: number) {
     this.arialSelected = arialSelected

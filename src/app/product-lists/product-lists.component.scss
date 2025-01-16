@@ -145,6 +145,13 @@ justify-content: unset;
     text-align: left;
     margin-right: 10px;
     font-weight: 800;
+    font-size: 17px;
+  }
+
+  .sizes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
   .product-card .rating {
