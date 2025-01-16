@@ -7,7 +7,7 @@
 		<ion-icon [name]="router === '/cart' ? 'bag-handle' : 'bag-handle-outline'"></ion-icon>
 	  </button>
 	  <button role="tab" routerLinkActive="active" [routerLink]="'/orders'">
-		<ion-icon [name]="router === '/orders' ? 'cart' : 'cart-outline'" size="large"></ion-icon>
+		<ion-icon [name]="router === '/orders'  || router === '/track-order'? 'cart' : 'cart-outline'" size="large"></ion-icon>
 	  </button>
 	  <button role="tab" routerLinkActive="active" [routerLink]="'/offers'">
 		<ion-icon [name]="router === '/offers' ? 'wallet' : 'wallet-outline'"></ion-icon>
