@@ -106,28 +106,30 @@ justify-content: unset;
   .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start; /* Align items to the start */
     gap: 20px;
     margin-top: 30px;
     margin-bottom: 20px;
   }
 
   .product-card {
+    flex: 1 1 calc(50% - 20px); /* 50% width minus gap */
+    max-width: calc(50% - 20px); /* Max width same as flex-basis */
+    box-sizing: border-box; /* Includes padding and borders in width calculation */
+    padding: 15px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
-    position: relative;
-    del{
-      margin-right: 5px;
-    }
   }
-
+  
+  
   .product-card img {
-    width: 100%;
-    object-fit: fill; /* Ensure the image scales properly */
-    margin: 0 auto; /* Center the image */
-    display: block; /* Ensure it's treated as a block element */
-}
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
 
 
   .product-card h3 {

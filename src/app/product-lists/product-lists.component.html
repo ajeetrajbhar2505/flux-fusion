@@ -37,19 +37,9 @@
       <img [src]="'assets/' + data.folder + '/' + (1) + '.webp'" [alt]="data.productName">
       <h3>{{ data.productName }}</h3>
       <p class="rating">
-        <ion-icon size="medium" class="ionic-icon" name="star-outline"></ion-icon> 4.8 (4,749 reviews)
+        <ion-icon size="medium" class="ionic-icon" name="star"></ion-icon> 4.8 (4,749 reviews)
       </p>
       <p><span class="price">INR {{ data.productAmount - 7 }}</span></p>
-      <p class="sizes">
-        <span *ngFor="let size of sizes">
-          <ng-container *ngIf="data.sizeAvailable.includes(size); else unavailable">
-            {{ size }}
-          </ng-container>
-          <ng-template #unavailable>
-            <del>{{ size }}</del>
-          </ng-template>
-        </span>
-      </p>
     </div>
     
   </div>
