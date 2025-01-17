@@ -2,6 +2,8 @@
     justify-content: unset;
   }
 
+  $primary: #333;
+
   .tabs-container {
     width: 100%;
     max-width: 700px;
@@ -63,7 +65,7 @@
     align-items: center;
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding-bottom: 10px;
   }
   
   .cart-item img {
@@ -162,8 +164,6 @@
   .contaienr {
     display: grid;
     justify-content: center;
-    margin: 25px;
-    // border-bottom: 1px solid #333;
     .details h2{
       margin: 0;
     font-size: 13px;
@@ -171,7 +171,14 @@
     line-height: 25px;
     text-align: center;
     margin-bottom: 20px;
+    text-align: center;
     }
+  }
+  .order-status-details h2{
+    text-align: left;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 600;
   }
   
   .progress-container {
@@ -204,7 +211,7 @@
     top: 50%;
     transform: translateY(-50%);
     transition: 0.4s ease;
-    width: 70%;
+    width: 30%;
   }
   
   .circle {
@@ -255,3 +262,89 @@
     }
   }
   
+
+
+  // second stepper
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 20px 20px;
+}
+
+.steps {
+  max-width: 90%;
+  margin-bottom: 50px;
+}
+
+.step {
+  display: flex;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    height: 0;
+    width: 2px;
+    background-color: $primary;
+  }
+
+  .info {
+    margin: 8px 0 20px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #333;
+  }
+
+  .text {
+    font-size: 12px;
+    color: rgba(#333, 0.7);
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    &:after {
+      height: 75%;
+    }
+   
+  }
+}
+
+.number {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid $primary;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 14px;
+
+  &.completed {
+    background-color: $primary;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+
+    path {
+      fill: #333;
+    }
+  }
+}
+

@@ -13,7 +13,7 @@ export class ProductListsComponent {
   products: any[] = [
     { productName: 'Blue Shirt', folder : 'shirt-1', productAmount: '999', totalProductsSold: 1323,sizeAvailable :['S','M','L','XL','XXL']  },
     { productName: 'Pink Shirt', folder : 'shirt-2', productAmount: '999', totalProductsSold: 423,sizeAvailable : ['S','M','L'] },
-    { productName: 'Colour Combo Shirt', folder : 'shirt-3', productAmount: '999', totalProductsSold: 2323,sizeAvailable : ['S','M','L','XXL'] },
+    { productName: 'Black Shirt', folder : 'shirt-3', productAmount: '999', totalProductsSold: 2323,sizeAvailable : ['S','M','L','XXL'] },
     { productName: 'Black Shirt', folder : 'shirt-4', productAmount: '999', totalProductsSold: 8223,sizeAvailable : ['S','M','L','XL'] },
   ]
   sizes : string[] = ['S','M','L','XL','XXL']
