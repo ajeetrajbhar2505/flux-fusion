@@ -211,8 +211,24 @@
     top: 50%;
     transform: translateY(-50%);
     transition: 0.4s ease;
-    width: 30%;
+    animation: progressAnimation 4s ease-in-out infinite;
   }
+  
+  @keyframes progressAnimation {
+    0% {
+      width: 0;
+    }
+    25% {
+      width: 30%;
+    }
+    75% {
+      width: 70%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
   
   .circle {
     align-items: center;
@@ -228,15 +244,45 @@
     transition: 0.4s ease;
     width: 50px;
     z-index: 12;
-  
     &.active {
       border: 1px dotted #333;
     }
-  
-    /* Hide the text inside the circle */
     font-size: 0;
   }
+
   
+
+  .circle:nth-child(2) {
+    animation: borderAnimation 3.7s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+  .circle:nth-child(3) {
+    animation: borderAnimation 4s ease-in-out infinite;
+    animation-delay: 0.1s;
+  }
+  .circle:nth-child(4) {
+    animation: borderAnimation 4s ease-in-out infinite;
+    animation-delay: 1s; /* Added 's' for seconds */
+  }
+  .circle:nth-child(5) {
+    animation: borderAnimation 4s ease-in-out infinite;
+    animation-delay: 2s; /* Added 's' for seconds */
+  }
+  
+  /* Keyframes for border animation */
+  @keyframes borderAnimation {
+    0%, 25% {
+      border: 1px dotted #fff;
+    }
+    50% {
+      border: 1px dotted #333;
+    }
+    75%, 100% {
+      border: 1px dotted #fff;
+    }
+  }
+  
+
   .btn {
     background-color: #333;
     border: 0;

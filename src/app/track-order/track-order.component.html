@@ -29,17 +29,17 @@
   
     <div class="progress-container">
       <div class="progress" id="progress"></div>
-      <div class="circle active" style="background-image: url('assets/delivery/box.png');"></div>
-      <div class="circle active" style="background-image: url('assets/delivery/vehicle.png');"></div>
-      <div class="circle active" style="background-image: url('assets/delivery/delivery.png');"></div>
+      <div class="circle" style="background-image: url('assets/delivery/box.png');"></div>
+      <div class="circle" style="background-image: url('assets/delivery/vehicle.png');"></div>
+      <div class="circle" style="background-image: url('assets/delivery/delivery.png');"></div>
       <div class="circle" style="background-image: url('assets/delivery/delivered.png');"></div>
     </div>
   </div>
 
   <div class='wrapper'>
-    <div class="order-status-details">
-      <h2>Order Status Details</h2>
-    </div>
+      <div class="order-status-details">
+    <h2>Order Status Details</h2>
+  </div>
     <div class='steps' id='steps'>
       <div class="step" *ngFor="let wizard of wizards">
         <div class="number" [ngClass]="{'completed': wizard.complete}" [innerHTML]="tickIcon">
