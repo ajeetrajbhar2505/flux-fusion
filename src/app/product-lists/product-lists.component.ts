@@ -11,10 +11,10 @@ export class ProductListsComponent {
   @Input() search: boolean = false
   searchQuery: string = '';
   products: any[] = [
-    { productName: 'Blue Shirt', folder : 'shirt-1', productAmount: '999', totalProductsSold: 1323,sizeAvailable :['S','M','L','XL','XXL']  },
-    { productName: 'Pink Shirt', folder : 'shirt-2', productAmount: '999', totalProductsSold: 423,sizeAvailable : ['S','M','L'] },
-    { productName: 'Black Shirt', folder : 'shirt-3', productAmount: '999', totalProductsSold: 2323,sizeAvailable : ['S','M','L','XXL'] },
-    { productName: 'Black Shirt', folder : 'shirt-4', productAmount: '999', totalProductsSold: 8223,sizeAvailable : ['S','M','L','XL'] },
+    { productName: 'Park Avenue Blue Structure Slim Fit Full Sleeve Cotton Shirt', folder : 'shirt-1', productAmount: '999', totalProductsSold: 1323,sizeAvailable :['S','M','L','XL','XXL']  },
+    { productName: 'Double Cuff Pink Shirt', folder : 'shirt-2', productAmount: '999', totalProductsSold: 423,sizeAvailable : ['S','M','L'] },
+    { productName: 'SLIM FIT FULL SLEEVES SEMI CASUAL SHIRT', folder : 'shirt-3', productAmount: '999', totalProductsSold: 2323,sizeAvailable : ['S','M','L','XXL'] },
+    { productName: 'Black - Plain Cotton Shirts', folder : 'shirt-4', productAmount: '999', totalProductsSold: 8223,sizeAvailable : ['S','M','L','XL'] },
   ]
   sizes : string[] = ['S','M','L','XL','XXL']
   filteredProducts: any[] = [];

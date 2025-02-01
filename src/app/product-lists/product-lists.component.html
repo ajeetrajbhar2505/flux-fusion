@@ -21,8 +21,8 @@
   </div>
   <section class="most-popular" *ngIf="showheader && filteredProducts.length">
     <div class="filter-buttons">
-      <button class="active">All</button>
-      <button>Clothes</button>
+      <button>All</button>
+      <button class="active">Clothes</button>
       <button>Shoes</button>
       <button>Bags</button>
       <button>Pants</button>
@@ -35,11 +35,16 @@
     <!-- Product Card -->
     <div class="product-card" *ngFor="let data of (search ? filteredProducts : products); let i = index" (click)="viewProduct(i + 1)">
       <img [src]="'assets/' + data.folder + '/' + (1) + '.webp'" [alt]="data.productName">
-      <h3>{{ data.productName }}</h3>
+      <p><span class="price">INR {{ data.productAmount - 7}}</span></p>
+      <p class="productname">{{ data.productName }}</p>
       <p class="rating">
-        <ion-icon size="medium" class="ionic-icon" name="star"></ion-icon> 4.8 (4,749 reviews)
-      </p>
-      <p><span class="price">INR {{ data.productAmount - 7 }}</span></p>
+        <ion-icon size="medium" color="Warning" class="ionic-icon" name="star-outline"></ion-icon>
+        <ion-icon size="medium" color="Warning" class="ionic-icon" name="star-outline"></ion-icon>
+        <ion-icon size="medium" color="Warning" class="ionic-icon" name="star-half-outline"></ion-icon>
+        <ion-icon size="medium" color="Warning" class="ionic-icon" name="star"></ion-icon>
+        <ion-icon size="medium" color="Warning" class="ionic-icon" name="star"></ion-icon>
+        <span class="number">2,93{{i}}</span>
+         </p>
     </div>
     
   </div>
