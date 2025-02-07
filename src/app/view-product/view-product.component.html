@@ -29,20 +29,35 @@
 
     <div class="colors">
       <span class="label">Colors</span>
-      <button class="black active"><ion-icon size="medium" name="checkmark-outline"></ion-icon></button>
-      <button class="blue"></button>
-      <button class="gray"></button>
-      <button class="brown"></button>
-      <button class="white"></button>
+      <button class="black" (click)="activeColorId = 0" [class.active]="activeColorId === 0">
+        <ion-icon *ngIf="activeColorId === 0" size="medium" name="checkmark-outline"></ion-icon>
+      </button>
+      
+      <button class="blue" (click)="activeColorId = 1" [class.active]="activeColorId === 1">
+        <ion-icon *ngIf="activeColorId === 1" size="medium" name="checkmark-outline"></ion-icon>
+      </button>
+      
+      <button class="gray" (click)="activeColorId = 2" [class.active]="activeColorId === 2">
+        <ion-icon *ngIf="activeColorId === 2" size="medium" name="checkmark-outline"></ion-icon>
+      </button>
+      
+      <button class="brown" (click)="activeColorId = 3" [class.active]="activeColorId === 3">
+        <ion-icon *ngIf="activeColorId === 3" size="medium" name="checkmark-outline"></ion-icon>
+      </button>
+      
+      <button class="white {{activeColorId === 4?'black-color':''}}" (click)="activeColorId = 4" [class.active]="activeColorId === 4">
+        <ion-icon *ngIf="activeColorId === 4" size="medium" name="checkmark-outline"></ion-icon>
+      </button>
+      
     </div>
     
     <div class="sizes">
       <span class="label">Sizes</span>
-      <button class="active">S</button>
-      <button>M</button>
-      <button>L</button>
-      <button>XL</button>
-      <button>XXL</button>
+      <button (click)="activeSizeId = 0" [class.active]="activeSizeId === 0">S</button>
+      <button (click)="activeSizeId = 1" [class.active]="activeSizeId === 1">M</button>
+      <button (click)="activeSizeId = 2" [class.active]="activeSizeId === 2">L</button>
+      <button (click)="activeSizeId = 3" [class.active]="activeSizeId === 3">XL</button>
+      <button (click)="activeSizeId = 4" [class.active]="activeSizeId === 4">XXL</button>
     </div>
 
 
@@ -51,16 +66,16 @@
   <div class="quantity">
     <span>Quantity</span>
     <div class="controls">
-      <button>-</button>
-      <span>1</span>
-      <button>+</button>
+      <button (click)="decrement()">-</button>
+      <span>{{incrementedValue}}</span>
+      <button (click)="increment()">+</button>
     </div>
   </div>
 
 <div class="payment-details">
   <div class="price-details">
       <p>Total Price:</p>
-      <span class="price"> $108.00</span>
+      <span class="price"> ${{amount}}.00</span>
   </div>
   <div class="buy-button">
     <button class="add-to-cart"> <ion-icon size="medium"  class="ionic-icon" name="bag-handle-outline"></ion-icon>
