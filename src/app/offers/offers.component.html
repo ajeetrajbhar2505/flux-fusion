@@ -1,9 +1,11 @@
-<div collapse="fade" class="ion-no-border">
+<div class="pd-none-container">
+  <div collapse="fade" class="ion-no-border">
   <div class="ion-toolbar">
       <ion-icon size="medium" class="ionic-icon" (click)="goBack()" name="arrow-back-outline"></ion-icon>
       <div class="ionic-title"> Offers </div>
   </div>
 </div>
+  
 <section class="special-offers">
   <div class="offer-card" *ngFor="let data of offers" routerLink="/view-offers">
     <div class="offer-text">
@@ -13,3 +15,4 @@
     <img loading="lazy" [src]="data.image" [alt]="data.alt">
   </div>
 </section>
+</div>

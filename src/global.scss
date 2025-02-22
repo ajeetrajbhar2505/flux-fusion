@@ -35,225 +35,241 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
 body {
-    font-family: 'Poppins';font-size: 18px;
+  font-family: 'Poppins';
+  font-size: 18px;
 }
 
-.ion-page{
-    background-color: #fff;
-    overflow: auto;
+.ion-page {
+  background-color: #fff;
+  overflow: auto;
 }
 
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-
-  .container {
-    background: #fff;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  h2 {
-    color: #333;
-    font-size: 1.5rem;
-  }
-  
-  .box,
-  .box button {
-    display: flex;
-    align-items: center;
-  }
-  
-  .box {
-    width: 100%;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .box button, .box-two button {
-    width: 100%;
-    height: 45px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    border: none;
-    border-radius: 30px;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  
-  .box-one button img {
-    margin-right: 10px;
-  }
-  
-  h5 {
-    color: #666;
-    margin: 20px 0;
-    text-align: center;
-  }
-  
-  .box-two {
-    width: 100%;
-    }
-
-  /* Input container styling with icons */
-.input-container {
-    position: relative;
-    width: 100%;
-  }
-
-  .mt-30{
-    margin-top: 30px;
-
-  }
-  
-  .input-container i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .input-field {
-    width: 100%;
-    height: 45px;
-    border-radius: 30px;
-    border: none;
-    padding-left: 45px; /* Adjust padding to make space for the icon */
-    padding-right: 15px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .input-field:focus {
-    outline: none;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  }
-  
-  
-  .box-two .next-btn {
-    background-color: #121212;
-    color: #fff;
-  }
-  
-  .container p {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .container p a {
-    text-decoration: none;
-    color: #f68084;
-    font-weight: bold;
-  }
-  
-
-
-
-  .logo img{
-    margin-top: 20px;
-    height: 330px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+
+.container,.pd-none-container {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInUp 0.5s ease;
+
+}
+
+
+.pd-none-container{
+  padding: 0;
+}
+
+
+h2 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.box,
+.box button {
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box button,
+.box-two button {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: none;
+  border-radius: 30px;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.box-one button img {
+  margin-right: 10px;
+}
+
+h5 {
+  color: #666;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.box-two {
+  width: 100%;
+}
+
+/* Input container styling with icons */
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.mt-30 {
+  margin-top: 30px;
+
+}
+
+.input-container i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.input-field {
+  width: 100%;
+  height: 45px;
+  border-radius: 30px;
+  border: none;
+  padding-left: 45px;
+  /* Adjust padding to make space for the icon */
+  padding-right: 15px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+.box-two .next-btn {
+  background-color: #121212;
+  color: #fff;
+}
+
+.container p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.container p a {
+  text-decoration: none;
+  color: #f68084;
+  font-weight: bold;
+}
+
+
+
+
+.logo img {
+  margin-top: 20px;
+  height: 330px;
+}
+
 .header {
-    p{
-        font-size: 30px;
+  p {
+    font-size: 30px;
     font-weight: bolder;
-    }
-    text-align: center;
-    color: #000;
+  }
+
+  text-align: center;
+  color: #000;
 }
 
 .header h4 {
-    font-size: 48px;
-    margin-bottom: 34px;
+  font-size: 48px;
+  margin-bottom: 34px;
 }
 
 .header h4 span {
-    color: #00e777;
+  color: #00e777;
 }
 
 .login {
-    padding: 0 10%;
-    margin-top: 10%;
-    margin-bottom: 30px;
+  padding: 0 10%;
+  margin-top: 10%;
+  margin-bottom: 30px;
 }
 
 .btn {
-    cursor: pointer;
-    display: block;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 16px 12px;
-    border-radius: 4px;
-    text-align: center;
-    white-space: nowrap;
-    background-image: none;
-    line-height: 1.42857143;
-    border: 1px solid transparent;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 16px 12px;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  background-image: none;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
 }
 
 .sign-in {
-    background-color: #000;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 
 
 .button-next--fade {
-    opacity: 0.3;
-    pointer-events: none;
-    filter: blur(2px);
+  opacity: 0.3;
+  pointer-events: none;
+  filter: blur(2px);
 }
 
 
 .slider-group {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    gap: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 5px;
 }
 
 .slider {
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50px;
-    background-color: #0000002e;
-    cursor: pointer;
-    margin: 2px 0;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #0000002e;
+  cursor: pointer;
+  margin: 2px 0;
 }
 
 .slider.selected {
-    width: 25px;
-    background-color: #000;
-    height: 5px;
-    animation: activeItem 5ms ease-in-out;
+  width: 25px;
+  background-color: #000;
+  height: 5px;
+  animation: activeItem 5ms ease-in-out;
 }
 
 
 .ion-toolbar {
   display: flex;
+  align-items: center;
   gap: 20px;
   padding: 20px;
 
@@ -266,5 +282,18 @@ body {
   .ionic-title {
     font-weight: bold;
     color: #333;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

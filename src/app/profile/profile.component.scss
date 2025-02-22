@@ -10,7 +10,6 @@
 .back-button {
     border: none;
     border-radius: 50%;
-    font-size: 18px;
     cursor: pointer;
     position: absolute;
     left: 15px;
@@ -68,7 +67,7 @@
     display: flex;
     align-items: flex-start;
     padding: 12px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -77,11 +76,12 @@
     margin-right: 10px;
 }
 
-.menu-item:hover {
-    background: #f5f5f5;
-    border-radius: 5px;
-}
 
 ion-icon {
     font-size: 25px;
+    font-weight: 800;
+  }
+
+  .ion-toolbar{
+    padding-bottom: 0;
   }

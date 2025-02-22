@@ -1,6 +1,12 @@
+<div class="pd-none-container">
+<div collapse="fade" class="ion-no-border">
+  <div class="ion-toolbar">
+    <ion-icon size="small" class="ionic-icon" (click)="goBack()"  name="arrow-back-outline"></ion-icon>
+    <div class="ionic-title">Profile</div>
+  </div>
+</div>
+
 <div class="profile-container">
-<ion-icon name="arrow-back-outline" class="back-button"></ion-icon>
-  <h2 class="title">Profile</h2>
 
   <div class="profile-info">
     <ion-icon size="large" class="profile-pic" name="person-circle-outline"></ion-icon>
@@ -18,6 +24,7 @@
 
   <div class="menu">
       <div class="menu-item"><span><ion-icon  name="shield-outline"></ion-icon></span> Help & Support</div>
-      <div class="menu-item logout"><span><ion-icon  name="log-out-outline"></ion-icon></span> Log out</div>
+      <div class="menu-item logout" routerLink="/authenticate"><span><ion-icon  name="log-out-outline"></ion-icon></span> Log out</div>
   </div>
+</div>
 </div>
