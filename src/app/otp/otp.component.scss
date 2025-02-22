@@ -313,22 +313,24 @@
   left: 0;
   right: 0;
   background: rgb(30 26 26 / 48%);
-  animation: zoomInPopup 0.5s ease;
+  animation: fadeInUp 0.5s ease;
   display: none;
   opacity: 0;
 }
 
 
-@keyframes zoomInPopup {
+
+@keyframes fadeInUp {
   from {
-    transform: scale(0.1);
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   to {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
 
 .overlay__false {
   display: block;
