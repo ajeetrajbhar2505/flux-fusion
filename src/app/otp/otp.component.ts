@@ -66,9 +66,11 @@ export class OtpComponent implements OnInit, OnDestroy {
   }
 
   showConfirmation() {
-    setTimeout(() => {
       this.showLoader = true
-    }, 200);
+      return
+    //   setTimeout(() => {
+    //   this.showLoader = true
+    // }, 200);
     setTimeout(() => {
       this.startCounter(1500)
       this.showLoader = false
